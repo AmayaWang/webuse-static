@@ -1,0 +1,93 @@
+@charset "UTF-8";
+//图片尺寸
+%img24x24             { width: ptr(24px); height:ptr(24px);}
+%img32x32             { width: ptr(32px); height:ptr(32px);}
+%img50x50             { width: ptr(50px); height:ptr(50px);}
+%img90x68             { width: ptr(90px); height:ptr(68px);}
+%img140x105           { width: ptr(140px); height:ptr(105px);}
+%img140x105screen360  { width: ptr(160px); height:ptr(120px);}
+%img140x79            { width: ptr(140px); height:ptr(79px);}
+%img140x79screen360   { width: ptr(160px); height:ptr(90px);}
+
+//预设样式
+%appearance {
+  @include appearance(none);
+}
+
+//盒模型
+%box-sizing-border {
+  @include box-sizing;
+}
+%box-sizing-content {
+  @include box-sizing(content-box);
+}
+
+//清除浮动
+%clearfloat {
+  display:block; 
+  clear:both; 
+  height:0; 
+  overflow:hidden;
+}
+
+//截字
+%ellipsis-basic {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+//预加载图
+%holdimg {
+  background: url(http://s.autoimg.cn/mass/v2/img/holdimg.png) center center no-repeat;
+  background-size: 80px auto;
+}
+
+//快速滚动
+%scrolling-touch {
+  -webkit-overflow-scrolling:touch;
+  overflow-scrolling:touch;
+}
+
+//border三角
+%triangle-basic {
+  content:"";
+  height: 0;
+  width: 0;
+  overflow:hidden;
+}
+@mixin triangle($direction, $size, $borderColor ) {
+  @extend %triangle-basic;
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  } 
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  } 
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  } 
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+}
+
+//赞动画
+@-webkit-keyframes praisepoint {
+  0% { -webkit-transform: scale(1); transform: scale(1); }
+  80% { -webkit-transform: scale(2); transform: scale(2);}
+  100% { -webkit-transform: scale(1); transform: scale(1);}
+}
+@keyframes praisepoint {
+  0% { -webkit-transform: scale(1); transform: scale(1);}
+  80% { -webkit-transform: scale(2); transform: scale(2);}
+  100% { -webkit-transform: scale(1); transform: scale(1);}
+}

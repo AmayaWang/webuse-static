@@ -1,0 +1,130 @@
+@charset "UTF-8";
+//分页控件
+$page-text:             $gray-text;
+$page-base:             $gray-base-light;
+$page-border:           $gray-border;
+$page-text-focus:       $white;
+$page-base-focus:       $blue-light;
+$page-border-focus:     $blue-light;
+$page-text-disabled:    $gray-text-lighter;
+$page-input-text:       $blue-light;
+$page-input-text-focus: $gray-text;
+$page-input-base:       $white;
+.page,
+.page-bbs,
+.page-article {
+  height: ptr(34px);
+  line-height: 1;
+  background-color: $page-base; 
+  border:solid $page-border 1px; 
+  border-radius: $radius;
+  a { 
+    @extend %box-sizing-border;
+    float: left; 
+    padding: ptr(9px) 0;
+    font-size: $fontsize-default; 
+    color: $page-text; 
+    text-align: center;
+    border-right: solid $page-border 1px; 
+    &.home { width: 17%;}
+    &.prev { width: 22%; border-right: 0;}
+    &.next { width: 22%;}
+    &.last { width: 17%; border-right: none;}
+    &:visited { color: $page-text - #000001;}
+    &.disabled {
+      color: $page-text-disabled;
+      pointer-events: none;
+    }
+  }
+  span { 
+    @extend %box-sizing-border;
+    float: left;
+    font-size: $fontsize-default; 
+    text-align: center;
+    border-right: solid $page-border 1px; 
+    &.num { 
+      width: 22%; 
+      margin-top: -1px; 
+      border: solid $page-border 1px;
+    }
+    &.skip { 
+      display: none; 
+      margin-top: -1px;
+      padding: ptr(10px) 0;
+      color: $page-text-focus; 
+      background-color: $page-base-focus; 
+    }
+    &.stop { 
+      display: none; 
+      padding: ptr(9px) 0; 
+      border-right: none;
+    }	
+    input { 
+      @extend %box-sizing-border;
+      display: block;
+      width: 100%; 
+      height: ptr(34px); 
+      padding: ptr(10px) 0;
+      font-size: $fontsize-small;
+      line-height: 1; 
+      color: $page-input-text; 
+      text-align: center;
+      background-color: $page-input-base;  
+      border: 0; 
+    }
+  }
+}
+.page {
+  &.focus {
+    a {
+      &.next { display: none;}
+      &.last { display: none;}
+    }
+    span {
+      &.num { border-color: $page-border-focus;}
+      &.skip { display: block; width: 20%;}
+      &.stop { display: block; width: 19%;}
+      input { color: $page-input-text-focus;}
+    }
+  }
+}
+.page-bbs {
+  a {
+    &.next { width:22%; border-right:none;}
+  }
+  span{
+    &.num { width:39%;}
+  }
+  &.focus {
+    a{
+      &.next { display:none;}
+    }
+    span {
+      &.num { width:22%; border-color: $page-border-focus;}
+      &.skip { display:block; width:20%;}
+      &.stop { display:block; width:19%;}
+      input { color: $page-input-text-focus;}
+    }
+  }
+}
+.page-article {
+  a {
+    &.plus { width:28%;}
+    &.next { width:22%; border-right:none;}
+  }
+  span {
+    &.num { width:28%;}
+  }
+  &.focus {
+    a {
+      &.plus { display:none;}
+      &.next { display:none;}
+    }
+    span {
+      &.num { border-color: $page-border-focus;}
+      &.skip { display:block; width:25%;}
+      &.stop { display:block; width:25%;}
+      input { color: $page-input-text-focus;}
+    }	
+  }
+}

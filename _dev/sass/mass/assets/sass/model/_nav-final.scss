@@ -1,0 +1,46 @@
+@charset "UTF-8";
+//最终导航控件
+$nav-final-text: $white;
+$nav-final-base: $blue;
+.nav-final {
+  position: relative;
+  height: ptr(40px);
+  line-height: 1;
+  background-color: $nav-final-base;
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: ptr(12px) 0 ptr(12px) ptr(8px);
+    font-size: $fontsize-default;
+    color: $nav-final-text;
+    &:visited { color: $nav-final-text - #000001;}
+    .icon-backward {
+      margin-right: ptr(4px);
+      vertical-align: ptr(1px);
+    }
+  }
+  .download,
+  .handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: ptr(12px) ptr(12px) ptr(12px) 0;
+    font-size: $fontsize-default;
+    color: $nav-final-text;
+    &:visited{ color: $nav-final-text - #000001;}
+    .iconfont {
+      display: inline-block;
+      margin-right: ptr(8px);
+      vertical-align: top;
+    }
+  }
+  p {
+    margin: 0 ptr(80px);
+    padding: ptr(10px) 0;
+    font-size: $fontsize-big;
+    color: $nav-final-text;
+    text-align: center;
+    @extend %ellipsis-basic;
+  }
+}

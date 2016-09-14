@@ -1,0 +1,23 @@
+@charset "UTF-8";
+//加载中控件
+$overallloading-text: $white;
+.overallloading {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  z-index: 1010;
+  width: ptr(124px);
+  height: ptr(118px);
+  margin-left: ptr(-62px);
+  font-size: $fontsize-default;
+  color: $overallloading-text;
+  line-height: 1;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: $radius;
+  overflow: hidden;
+  .load {
+    display: block;
+    margin: ptr(40px) auto ptr(12px);
+  }
+}

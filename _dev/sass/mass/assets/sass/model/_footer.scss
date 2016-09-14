@@ -1,0 +1,35 @@
+@charset "UTF-8";
+//底部控件
+$footer-text: $white;
+$footer-base: $blue-light;
+.footer {
+  padding: ptr(16px) 0;
+  background-color: $footer-base;
+  line-height: 1;
+  .switch,
+  .suggest {
+    margin-bottom: ptr(16px);
+    font-size: $fontsize-small;
+    color: $footer-text;
+    &:visited { color: $footer-text - #000001;}
+  }
+  .switch {
+    float: left;
+    margin-left: ptr(34px);
+    .icon-computer { margin-right: ptr(8px);}
+  }
+  .suggest {
+    float: right;
+    margin-right: ptr(27px);
+    .icon-edit {
+      margin-right: ptr(8px);
+      font-size: ptr(18px);
+    }
+  }
+  p {
+    clear: both;
+    font-size: $fontsize-tiny;
+    color: $footer-text;
+    text-align: center;
+  }
+}

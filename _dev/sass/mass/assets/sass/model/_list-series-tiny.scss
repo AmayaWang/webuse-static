@@ -1,0 +1,43 @@
+@charset "UTF-8";
+//简版车系列表控件
+$list-series-tiny-text: $gray-text;
+$list-series-tiny-base: $gray-base-light;
+.list-series-tiny {
+  line-height: 1;
+  overflow: hidden;
+  li { 
+    float: left;
+    width: 33%;
+    padding-top: ptr(12px);
+    &:nth-child(3n-1) {
+      width: 34%;
+      a {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &:nth-child(3n) {
+      a {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    display: block;
+    width: ptr(90px);
+    background-color: $list-series-tiny-base;
+  }
+  img {
+    @extend %img90x68;
+    @extend %holdimg;
+  }
+  strong{
+    display: block;
+    height: ptr(42px);
+    padding: ptr(4px) ptr(6px);
+    font-size: $fontsize-small;
+    color: $list-series-tiny-text;
+    line-height: 1.5;
+  }
+}

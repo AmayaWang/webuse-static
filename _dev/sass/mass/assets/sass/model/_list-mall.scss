@@ -1,0 +1,76 @@
+@charset "UTF-8";
+//车商城列表控件
+$list-mall-text:                    $gray-text-light;
+$list-mall-base:                    $white;
+$list-mall-border:                  $gray-border-light;
+$list-mall-title-text:              $blue-light;
+$list-mall-price-text:              $orange;
+$list-mall-mark-text:               $white;
+$list-mall-mark-base:               $red;
+$list-mall-handle-base:             $gray-base-light;
+$list-mall-telphone-text:           $green;
+$list-mall-buying-text:             $orange;
+
+.list-mall {
+  line-height: 1;
+  li {
+    margin-top: ptr(8px);
+    background-color: $list-mall-base;
+    border: solid $list-mall-border 1px;
+    border-radius: $radius;
+  }
+  h4 {
+    margin: ptr(12px) ptr(12px) 0;
+    font-size: $fontsize-large;
+    color: $list-mall-title-text;
+  }
+  .price {
+    margin: ptr(10px) ptr(12px) 0;
+    font-size: $fontsize-small;
+    color: $list-mall-text;
+    strong {
+      font-size: $fontsize-large;
+      color: $list-mall-price-text;
+      em { font-size: $fontsize-tiny;}
+    }
+  }
+  .event {
+    margin: ptr(9px) ptr(12px) 0;
+    font-size: $fontsize-tiny;
+    color: $list-mall-text;
+    line-height: 1.5;
+    overflow: hidden;
+    .mark-event { 
+      float: left;
+      margin: ptr(2px) ptr(8px) 0 0;
+      padding: ptr(1px) ptr(2px);
+      font-size: $fontsize-tiny;
+      color: $list-mall-mark-text;
+      line-height: 1;
+      background-color: $list-mall-mark-base;
+      border-radius: $radius;
+    }
+  }
+  .handle {
+    margin-top: ptr(9px);
+    background-color: $list-mall-handle-base;
+    border-top: solid $list-mall-border 1px;
+    overflow: hidden;
+    .telphone,
+    .buying {
+      float: left;
+      @extend %box-sizing-border;
+      width: 50%;
+      padding: ptr(10px) 0;
+      font-size: $fontsize-default;
+      color: $list-mall-telphone-text;
+      text-align: center;
+      border-right: solid $list-mall-border 1px;
+      .iconfont { margin-right: ptr(8px);}
+    }
+    .buying {
+      color: $list-mall-buying-text;
+      border-right: 0;
+    }
+  }
+}

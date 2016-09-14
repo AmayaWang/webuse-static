@@ -1,0 +1,59 @@
+@charset "UTF-8";
+//复选框控件
+$checkbox-text:         $gray-text;
+$checkbox-text-checked: $blue-light;
+$checkbox-input-base:   $gray-base-light;
+$checkbox-input-border: $gray-border;
+.checkbox { 
+  display: inline-block;
+  font-size: $fontsize-default;
+  color: $checkbox-text;
+  line-height: 1;
+  input {
+    @extend %appearance;
+    @extend %box-sizing-border;
+    position: relative;
+    width: ptr(18px); 
+    height: ptr(18px); 
+    margin-right: ptr(8px);
+    background-color: $checkbox-input-base; 
+    border: solid $checkbox-input-border 2px; 
+    border-radius: $radius; 
+    vertical-align: top;
+    &:checked {
+      &::before {
+        content: ""; 
+        width: ptr(18px); 
+        height: ptr(12px); 
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAZCAYAAAC2JufVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozMUVFMjM0MkYxRUNFMTExOEY4Q0FEOTVDMzNCMDI0NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowMTI5QTUwMTNFNEMxMUU0OURENEY4Q0I4MjY0MjU0MiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMTI5QTUwMDNFNEMxMUU0OURENEY4Q0I4MjY0MjU0MiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOEJBMUM5ODA4M0VFNDExQjUzQThEQ0YzMEM0OTM5QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowN0JBMUM5ODA4M0VFNDExQjUzQThEQ0YzMEM0OTM5QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PojfUDcAAAHISURBVHjazJZBRARRGMen2RXRddlr7L1DbESkSNE1IiU6d8qmLrG3iC7NpSwdYolVYm8prVa3SMvSdYhOexqWIfp/fMMz3nszb3aa6eNnzHs8//e+7/u/NzZde7Byjgn+DoMBO2dBZfDMlP6DqAp4AVXmFUzlKarKgiohkSRsJg9RK5yusmSulIeoXdAWilsMKvR1cJmlqDpogIJkbgCWwB39FDMQQyIu+JRk4YJl8BkMFDPwoFuuI1m8g1XwLQ7aimJL04NUgsi158OCZKKoVT/AlSL3STxIFtdgDXiySTvUqo+8wx1NlyTxIDFOwDbwVQsEorbAPZiM6SdJPOgH7IGjqEVI1Dio8dd01yYetAGcODuz+RjnwFPC+qA4jvAgavlW3OMO0udxazYNO6nAYuoaD6IO65oUpVjodGKb4FTjOW3BBMP/4eiBWdA37RSZeR7wDs8V7tzglC5qUtrRtbzJSYnh8OU4VMwfagQ1uYa8pCanu5BbXGcDg/XOuAT8Ua6CqFdChwvVjbEWedB+GvdTnKdLny2jp5j3OdWOlVLEfU99sbDOqB6UpqjAy0jAjeBBCxKhI4fpe8rn6+KNxbnWH8SvAAMAs2xeH8FpNc4AAAAASUVORK5CYII=") no-repeat; background-size: 100% auto;
+        position: absolute; 
+        top: 0; 
+        left: ptr(1px);
+      }
+      & + label { color: $checkbox-text-checked;}
+    }
+  }
+  label {
+    display: inline-block;
+    padding: ptr(1px) 0;
+  }
+  &.small {
+    font-size: $fontsize-small;
+    label { padding: ptr(2px) 0;}
+  }
+  &.full {
+    position: relative;
+    display: block;
+    padding-left: ptr(26px);
+    line-height: 1.5;
+    input {
+      position: absolute;
+      left: 0;
+      top: ptr(3px);
+    }
+    label { 
+      display: block;
+      padding: 0;
+    }
+  }
+}

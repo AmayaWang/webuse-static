@@ -1,0 +1,61 @@
+@charset "UTF-8";
+//二级标签控件
+$tab-secondary-base:                 $gray-base-light;
+$tab-secondary-border:               $gray-border-light;
+$tab-secondary-item-text:            $gray-text;
+$tab-secondary-item-base:            $gray-base-light;
+$tab-secondary-item-border:          transparent;
+$tab-secondary-item-text-activate:   $blue-light;
+$tab-secondary-item-base-activate:   $white;
+$tab-secondary-item-border-activate: $gray-border-light;
+$tab-secondary-onoff-text:           $blue-light;
+.tab-secondary {
+  padding: 0 ptr(8px);
+  line-height: 1;
+  background-color: $tab-secondary-base; 
+  border: solid $tab-secondary-border;
+  border-width: 1px 0;
+  
+  .item {
+    float: left;
+    margin: ptr(9px) ptr(4px) 0 ptr(4px); 
+    margin-bottom: -1px; 
+    padding: ptr(7px) ptr(12px); 
+    font-size: $fontsize-default; 
+    color: $tab-secondary-item-text; 
+    background-color: $tab-secondary-item-base; 
+    border: solid $tab-secondary-item-border;
+    border-width: 1px 1px 0;
+    border-radius: $radius $radius 0 0;
+    &:last-child { margin-right: 0;}
+    &.activate {
+      padding-bottom: ptr(8px);
+      color: $tab-secondary-item-text-activate; 
+      background-color: $tab-secondary-item-base-activate; 
+      border-color: $tab-secondary-item-border-activate;
+    }
+    &.battery { color: $green;}
+    .icon-petrol,
+    .icon-battery {
+      display: inline-block;
+      margin-right: ptr(8px);
+      vertical-align: top;
+    }
+  }
+  .onoff {
+    float: right;
+    padding: ptr(13px) 0;
+    font-size: $fontsize-small;
+    color: $tab-secondary-onoff-text;
+    .icon-arrow-top,
+    .icon-arrow-bottom {
+      margin-left: ptr(6px);
+      font-size: ptr(12px);
+      vertical-align: ptr(1px);
+    }
+  }
+  &::after {
+    content: "";
+    @extend %clearfloat;
+  }
+}

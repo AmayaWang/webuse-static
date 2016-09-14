@@ -1,0 +1,101 @@
+@charset "UTF-8";
+//频道导航控件
+$nav-channel-text:         $white;
+$nav-channel-base:         $blue;
+$nav-channel-message-text: $white;
+$nav-channel-message-base: $red-light;
+.nav-channel {
+  position: relative;
+  height: ptr(40px);
+  line-height: 1;
+  background-color: $nav-channel-base;
+  overflow: hidden;
+  .athm { 
+    float: left; 
+    width: ptr(78px); 
+    height: ptr(18px); 
+    margin: ptr(11px) 0 0 ptr(12px);
+    text-indent: -999rem; 
+    background-position: 0 ptr(-30px); 
+    overflow: hidden;
+  }
+  .channel {
+    position: relative;
+    float: left;
+    margin: ptr(10px) 0 0 ptr(26px);
+    font-size: $fontsize-big;
+    color: $nav-channel-text;
+    &::before{
+      content: "";
+      position: absolute;
+      top: ptr(9px);
+      left: ptr(-14px);
+      display: block;
+      width: ptr(2px);
+      height: ptr(2px);
+      background-color: $nav-channel-text;
+    }
+  }
+  .user {
+    position: absolute;
+    top: ptr(4px);
+    right: ptr(16px);
+    img {
+      @extend %img32x32;
+      border-radius: $radius;
+    }
+    i {
+      position: absolute;
+      top: ptr(-2px);
+      right: ptr(-10px);
+      width: ptr(18px);
+      padding: ptr(3px) 0;
+      font-size: $fontsize-tiny;
+      color: $nav-channel-message-text;
+      text-align: center;
+      background-color: $nav-channel-message-base;
+      border-radius: 50%;
+      &:visited{ color: $nav-channel-message-text - #000001;}
+    }
+  }
+  .icon-user {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: ptr(22px);
+    padding: ptr(9px) ptr(12px);
+  }
+  .icon-search { display: none;}
+  &.old {
+    .login {
+      position: absolute;
+      top: 0;
+      right: ptr(12px);
+      width: ptr(32px);
+      padding: ptr(12px) 0;
+      font-size: $fontsize-default;
+      color: $white;//未定义
+      text-align: center;
+      white-space: nowrap;
+    }
+    .user {
+      position: absolute;
+      top: ptr(4px);
+      right: ptr(12px);
+      i {
+        position: absolute;
+        top: ptr(-6px);
+        right: ptr(-12px);
+      }
+    }
+    .icon-search {
+      position: absolute;
+      top: 0;
+      right: ptr(56px);
+      display: block;
+      padding: ptr(10px) 0;
+      font-size: $fontsize-big;
+      color: $white;//未定义
+    }
+  }
+}

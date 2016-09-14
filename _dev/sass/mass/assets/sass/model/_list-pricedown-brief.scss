@@ -1,0 +1,45 @@
+@charset "UTF-8";
+//简版降价列表控件
+$list-pricedown-brief-text:      $gray-text;
+$list-pricedown-brief-base:      $white;
+$list-pricedown-brief-border:    $gray-border-lighter;
+$list-pricedown-brief-price:     $orange;
+$list-pricedown-brief-icon-down: $green;
+.list-pricedown-brief {
+  line-height: 1;
+  background-color: $white;
+  li { border-bottom: solid $list-pricedown-brief-border 1px;}
+  a {
+    position: relative;
+    display: block;
+    padding: ptr(12px) ptr(4px);
+    font-size: fontsize-default;
+    color: $list-pricedown-brief-text;
+    overflow: hidden;
+  }
+  .caption {
+    display: block;
+    margin-right: ptr(180px);
+    @extend %ellipsis-basic;
+  }
+  .range { 
+    position: absolute;
+    top: ptr(12px);
+    right: ptr(95px);
+    width: ptr(73px);
+    .icon-down {
+      display: inline-block;
+      margin-right: ptr(4px);
+      color: $list-pricedown-brief-icon-down;
+      vertical-align: top;
+    }
+    em { font-size: $fontsize-tiny;}
+  }
+  strong { 
+    position: absolute;
+    top: ptr(12px);
+    right: ptr(4px);
+    color: $list-pricedown-brief-price;
+    em { font-size: $fontsize-tiny;}
+  }
+}

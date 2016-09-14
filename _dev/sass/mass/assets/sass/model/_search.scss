@@ -1,0 +1,288 @@
+@charset "UTF-8";
+//搜索控件
+$search-base:                   $white;
+$search-header-border:          $gray-border-light;
+$search-header-icon-cross:      $gray-text-light;
+$search-tab-text:               $gray-text;
+$search-tab-text-activate:      $blue-light;
+$search-index-base:             $gray-base-light;
+$search-form-base:              $white;
+$search-form-border:            $gray-border;
+$search-input-text:             $gray-text;
+$search-input-icon-cross:       $white;
+$search-input-icon-cross-base:  #c3c3c3;
+$search-button-text:            $white;
+$search-button-base:            $blue-light;
+$search-button-border:          $blue-light;
+$search-button-icon:            $white;
+$search-result-text:            $gray-text;
+$search-result-base:            $gray-base-light;
+$search-result-border:          $gray-border-light;
+$search-result-through-text:    $blue-light;
+$search-result-mark-text:       $gray-text-light;
+$search-result-list-border:     $gray-border-lighter;
+$search-result-icon-add:        $gray-text-light;
+$search-result-title-text:      $gray-text-light;
+$search-result-title-hint-text: $gray-text-light;
+$search-result-title-icon:      $gray-text-light;
+$search-clear-base:             $white;
+.search {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  z-index: 1001; 
+  width: 100%; 
+  min-height: 100%; 
+  line-height: 1;
+  background-color: $search-base; 
+  header { 
+    position: relative;
+    border-bottom: solid $search-header-border 1px;
+    .icon-cross { 
+      position: absolute; 
+      top: 0; 
+      right: 0;
+      padding: ptr(12px);
+      color: $search-header-icon-cross;
+    }
+  }
+  .s-tab { 
+    position: relative;
+    margin-bottom: -1px;
+    padding: ptr(8px) ptr(12px) 0;
+    overflow: hidden;
+    input { 
+      position: absolute; 
+      top: 0; 
+      left: ptr(-50px);
+      visibility: hidden;
+    }
+    label { 
+      position: relative;
+      float: left; 
+      margin-right: ptr(20px); 
+      padding: ptr(12px) ptr(5px); 
+      font-size: $fontsize-default;
+      color: $search-tab-text;
+    }
+    input:checked + label { 
+      color: $search-tab-text-activate;
+      &::after {
+        content: ""; 
+        position: absolute; 
+        left: 0; 
+        bottom: -1px;
+        width: 100%; 
+        height: ptr(4px); 
+        background-color: $search-tab-text-activate; 
+      }
+    }
+  }
+  .s-index { 
+    padding: ptr(12px) ptr(8px) 0; 
+    background-color: $search-index-base; 
+  }
+  .s-form {
+    position: relative;
+    padding: 0 ptr(85px) 0 ptr(8px); 
+    background-color: $search-form-base; 
+    border: solid $search-form-border 1px; 
+    border-radius: $radius;
+    @include box-shadow(1px 1px 2px #d6d6d6 inset); 
+    input { 
+      @extend %appearance;
+      @extend %box-sizing-border;
+      display: block; 
+      width: 100%; 
+      height: ptr(34px); 
+      padding: ptr(5px) 0; 
+      background: none; 
+      border: 0; 
+      font-size: $fontsize-default; 
+      color: $search-input-text; 
+      line-height: ptr(24px);
+    }
+    .icon-cross { 
+      display: none;
+      position: absolute;
+      top: ptr(2px);
+      right: ptr(48px);
+      z-index: 10;
+      padding: ptr(7px);
+      color: $search-input-icon-cross;
+      text-align: center;
+      background-color: $search-input-icon-cross-base;
+      border-radius: 50%;
+      overflow: hidden;
+      @include scale(0.6);
+    }
+    input:valid + i.icon-cross { display: block;}
+    button {
+      @extend %appearance;
+      @extend %box-sizing-border;
+      position: absolute; 
+      top: -1px; 
+      right: -1px;
+      display: block; 
+      width: ptr(42px); 
+      height: ptr(36px); 
+      padding: ptr(8px) 0; 
+      font-size: ptr(18px);
+      color: $search-button-text;
+      line-height: 1; 
+      background-color: $search-button-base; 
+      border: solid $search-button-border 1px; 
+      border-radius: $radius; 
+    }
+  }
+  .s-result {
+    min-height: ptr(12px); 
+    background-color: $search-result-base;
+  }
+  .s-through,
+  .s-mixed,
+  .s-history {
+    padding: 0 ptr(8px); 
+    dt { 
+      padding: ptr(12px) ptr(6px) 0; 
+      font-size: $fontsize-small; 
+      color: $search-result-title-text;  
+      overflow: hidden;
+      span { 
+        display: none; 
+        float: right; 
+        margin-top: ptr(1px);
+        font-size: $fontsize-tiny; 
+        color: $search-result-title-hint-text;
+      }
+      .icon-car,
+      .icon-search,
+      .icon-time { 
+        float: left; 
+        margin-right: ptr(8px);
+        font-size: ptr(14px);
+        color: $search-result-title-icon;
+      }
+      .icon-add { 
+        margin: 0 ptr(4px); 
+        font-size: ptr(14px);
+        color: $search-result-icon-add;
+        vertical-align: ptr(-1px);
+      }
+    }
+    dd {
+      position: relative;
+      padding-right: ptr(44px); 
+      border-bottom: solid $search-result-list-border 1px;
+      a { 
+        display: block; 
+        padding: ptr(12px) ptr(6px); 
+        font-size: $fontsize-default;
+        color: $search-result-text;
+        mark { 
+          background: none; 
+          color: $search-result-mark-text;
+        }
+      }
+      .icon-add { 
+        position: absolute; 
+        top: 0; 
+        right: 0;
+        width: ptr(32px); 
+        padding: ptr(12px) 0 ptr(12px) ptr(12px);
+        color: $search-result-icon-add;
+        text-align: center; 
+      }
+    }
+  }
+  .s-through {
+    dd {
+      a { color: $search-result-through-text;}
+    }
+  }
+  .s-result {
+    dl:nth-child(1) dt span { display: block;}
+    dl.s-through:nth-last-child(1),
+    dl.s-mixed:nth-last-child(1) {
+      border-bottom: solid $search-result-border 1px;
+      dd:last-child { border-bottom: 0;}
+    }
+    dl.s-history:nth-last-child(2) {
+      border-bottom: solid $search-result-border 1px;
+      dd:last-child { border-bottom: 0;}
+    }
+  }
+  .s-clear { 
+    padding: ptr(12px) 0; 
+    background-color: $search-clear-base; 
+    text-align: center;
+  }
+}
+//
+.search-inlay {
+  position: relative;
+  width: auto;
+  min-height: 0;
+  .s-index { 
+    padding: 0;
+    .s-form { z-index: 10;}
+  }
+  .s-result {
+    position: absolute;
+    top: ptr(34px);
+    left: 0;
+    @extend %box-sizing-border;
+    width: 100%;
+    min-height: 0;
+    background-color: $white;
+    border: solid $gray-border;
+    border-width: 0 1px 1px;
+    border-radius: 0 0 ptr(4px) ptr(4px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    overflow: hidden;
+    dl.s-through:nth-last-child(2),
+    dl.s-mixed:nth-last-child(2) {
+      border-bottom: solid $gray-border-light 1px;
+      dd:last-child { border-bottom: 0;}
+    }
+    .s-clear {
+      padding: 0;
+      background-color: $gray-base-light;
+      overflow: hidden;
+      .clear {
+        float: left;
+        padding: 12px 8px;
+        border-right: solid $gray-border-light 1px;
+      }
+      .close,
+      .shut {
+        float: right;
+        padding: 12px 8px;
+        border-left: solid $gray-border-light 1px;
+      }
+    }
+  }
+}
+
+//搜索触发控件
+$search-trigger-text:        $gray-text-lighter;
+$search-trigger-base:        $white;
+$search-trigger-border:      $gray-border;
+$search-trigger-icon-search: $orange;
+.search-trigger {
+  padding: ptr(9px) ptr(8px);
+  font-size: $fontsize-default;
+  color: $search-trigger-text;
+  line-height: 1;
+  background-color: $search-trigger-base;
+  border: solid $search-trigger-border 1px;
+  border-radius: $radius;
+  @include box-shadow(1px 1px 2px #d6d6d6 inset);
+  overflow: hidden;
+  .icon-search {
+    float: right;
+    margin-top: ptr(-2px);
+    font-size: ptr(18px);
+    color: $search-trigger-icon-search;
+  }
+}

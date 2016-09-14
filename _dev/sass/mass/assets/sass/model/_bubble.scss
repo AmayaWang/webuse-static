@@ -1,0 +1,45 @@
+@charset "UTF-8";
+//气泡控件
+$bubble-text: $white;
+$bubble-base: rgba(0,0,0,0.8);
+.bubble {
+  position: relative;
+  z-index: 1010;
+  @extend %box-sizing-border;
+  width: ptr(180px);
+  padding: ptr(8px) ptr(26px) ptr(12px);
+  background-color: $bubble-base;
+  border-radius: $radius;
+  .info {
+    font-size: $fontsize-default;
+    color: $bubble-text;
+    line-height: 1.5;
+    text-align: left;
+    text-align: justify;
+  }
+  .handle {
+    margin-top: ptr(8px);
+    text-align: center;
+  }
+  .icon-cross {
+    position: absolute;;
+    top: 0;
+    right: 0;
+    padding: ptr(8px);
+    font-size: ptr(12px);
+    color: $white;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: ptr(-16px);
+    left:ptr(74px);
+    @include triangle(top, ptr(16px), $bubble-base);
+  }
+  &.bottom::after {
+    top: auto;
+    bottom: ptr(-16px);
+    border-bottom: 0;
+    @include triangle(bottom, ptr(16px), $bubble-base);
+  }
+}

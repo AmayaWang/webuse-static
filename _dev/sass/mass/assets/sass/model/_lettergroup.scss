@@ -1,0 +1,47 @@
+@charset "UTF-8";
+//字母组控件
+$lettergroup-text:           $gray-text;
+$lettergroup-base:           $gray-base-light;
+$lettergroup-text-highlight: $white;
+$lettergroup-base-highlight: $blue-light;
+$lettergroup-text-disabled:  $gray-text-lighter;
+.lettergroup {
+  padding: 0 ptr(4px);
+  line-height: 1;
+  overflow: hidden;
+  li {
+    float: left;
+    @extend %box-sizing-border;
+    width: 100%;
+    padding: ptr(8px) ptr(4px) 0;
+  }
+  a,
+  span {
+    display: block;
+    padding: ptr(10px) 0;
+    font-size: $fontsize-default;
+    color: $lettergroup-text;
+    text-align: center;
+    background-color: $lettergroup-base;
+    border-radius: $radius;
+    &:visited { color: $lettergroup-text - #000001;}
+    &.disabled {
+      color: $lettergroup-text-disabled;
+      pointer-events: none;
+    }
+    &.highlight {
+      color: $lettergroup-text-highlight;
+      background-color: $lettergroup-base-highlight;
+      &:visited { color: $lettergroup-text-highlight - #000001;}
+    }
+  }
+  &.column4 {
+    li { width: 25%;}
+  }
+  &.column7 {
+    li { 
+      width: 14.285%;
+      &:nth-child(7n - 3) { width: 14.29%;}
+    }
+  }
+}

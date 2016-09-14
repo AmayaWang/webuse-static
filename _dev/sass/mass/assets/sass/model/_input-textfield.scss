@@ -1,0 +1,40 @@
+@charset "UTF-8";
+//文本框
+$input-textfield-text:            $gray-text;
+$input-textfield-base:            $white;
+$input-textfield-border:          $gray-border;
+$input-textfield-border-focus:    $blue-light;
+$input-textfield-icon-cross:      $white;
+$input-textfield-icon-cross-base: #c3c3c3;
+.input-textfield {
+  position: relative;
+  input { 
+    @extend %appearance;
+    @extend %box-sizing-border;
+    width: 100%;
+    height: ptr(36px);
+    padding: ptr(5px) ptr(34px) ptr(5px) ptr(8px);
+    font-size: $fontsize-default;
+    color: $input-textfield-text;
+    line-height: ptr(24px);
+    background: $input-textfield-base;
+    border: solid $input-textfield-border 1px;
+    border-radius: $radius;
+    @include box-shadow(1px 1px 2px #d6d6d6 inset); 
+    &::-webkit-inner-spin-button { display: none;}
+    &:focus { border-color: $input-textfield-border-focus;}
+  }
+  .icon-cross { 
+    position: absolute;
+    top: ptr(3px);
+    right: ptr(3px);
+    z-index: 10;
+    padding: ptr(7px);
+    color: $input-textfield-icon-cross;
+    text-align: center;
+    background-color: $input-textfield-icon-cross-base;
+    border-radius: 50%;
+    overflow: hidden;
+    @include scale(0.6);
+  }
+}

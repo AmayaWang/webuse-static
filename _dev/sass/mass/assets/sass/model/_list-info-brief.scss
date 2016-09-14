@@ -1,0 +1,33 @@
+@charset "UTF-8";
+//简版资讯列表控件
+$list-info-brief-text:         $gray-text;
+$list-info-brief-base:         $white;
+$list-info-brief-comment-text: $gray-text-light;
+$list-info-brief-icon-comment: $gray-text-lighter;
+$list-info-brief-border:       $gray-border-lighter;
+.list-info-brief {
+  background-color: $list-info-brief-base;
+  line-height: 1;
+  li { border-bottom: solid $list-info-brief-border 1px;}
+  a { 
+    position: relative;
+    display: block;
+    padding: ptr(12px) ptr(64px) ptr(12px) ptr(4px);
+    font-size: $fontsize-default; 
+    color: $list-info-brief-text;
+    @extend %ellipsis-basic;
+  }
+  .comment {
+    position: absolute;
+    top: ptr(12px);
+    right: ptr(4px);
+    font-size: $fontsize-tiny;
+    color: $list-info-brief-comment-text;
+    line-height: ptr(16px);
+  }
+  .icon-comment {
+    margin-left: ptr(8px);
+    color: $list-info-brief-icon-comment;
+    vertical-align: ptr(-1px);
+  }
+}

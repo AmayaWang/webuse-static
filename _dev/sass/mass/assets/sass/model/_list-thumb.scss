@@ -1,0 +1,63 @@
+@charset "UTF-8";
+//图片列表控件
+$list-thumb-text: $gray-text;
+$list-thumb-base: $gray-base-light;
+.list-thumb {
+  margin-left: 8px;
+  margin-right: 8px;
+  line-height: 1;
+  overflow: hidden;
+  li { 
+    float: left; 
+    @extend %box-sizing-border;
+    width: 50%;
+    padding: ptr(12px) 4px 0;
+  }
+  a { 
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    background-color: $list-thumb-base;
+  }
+  img {
+    width: 140px;
+    height: 105px;
+    @extend %holdimg;
+  }
+  strong {
+    position: relative; 
+    display: block;
+    height: ptr(48px);
+    padding: ptr(4px) ptr(6px);
+    font-size: $fontsize-default;
+    color: $list-thumb-text;
+    line-height: 1.5;
+  }
+  @include min-screen(360px) {
+    a { width: 160px;}
+    img {
+      width: 160px;
+      height: 120px;
+    }
+    strong {
+      height: ptr(24px);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  @include min-screen(375px) {
+    a { width: 167px;}
+    img {
+      width: 167px;
+      height: 125px;
+    }
+  }
+  @include min-screen(414px) {
+    a { width: 187px;}
+    img {
+      width: 187px;
+      height: 140px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+//公告控件
+$notice-text: $gray-text;
+$notice-base: #fffbe2;
+.notice {
+  position: relative;
+  line-height: 1;
+  background-color: $notice-base;
+  a,
+  span {
+    display: block;
+    margin-right: ptr(40px);
+    padding: ptr(6px) 0 ptr(6px) ptr(12px);
+    font-size: $fontsize-default;
+    color: $notice-text;
+    line-height: 1.5;
+    &:visited { color: $notice-text - #000001;}
+  }
+  .icon-cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: ptr(10px) ptr(12px);
+    color: #888;
+  }
+}

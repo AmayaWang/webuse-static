@@ -1,0 +1,71 @@
+@charset "UTF-8";
+//车系列表控件
+$list-series-base:       $white;
+$list-series-border:     $gray-border-lighter;
+$list-series-title-text: $blue-light;
+$list-series-genre-text: $gray-text-light;
+$list-series-price-text: $orange;
+$list-series-skip-text:  $blue-light;
+.list-series {
+  line-height: 1;
+  background-color: $list-series-base;
+  li { border-bottom: solid $list-series-border 1px;}
+  .info {
+    display: block;
+    height: ptr(105px);
+    padding: ptr(12px) ptr(4px);
+    overflow: hidden;
+  }
+  img {
+    float: left;
+    @extend %img140x105; 
+    margin-right: ptr(12px);
+    @extend %holdimg;
+  }
+  h4 {
+    margin-top: ptr(18px);
+    font-size: $fontsize-large;
+    color: $list-series-title-text;
+  }
+  .genre {
+    margin-top: ptr(12px);
+    font-size: $fontsize-small;
+    color: $list-series-genre-text;
+  }
+  .price {
+    margin-top: ptr(12px);
+    font-size: $fontsize-default;
+    color: $list-series-price-text;
+    em { font-size: $fontsize-tiny;}
+  }
+  .brandsale,
+  .tuansale {
+    position: relative;
+    .info { margin-right: ptr(55px);}	
+    .skip{ 
+      position: absolute; 
+      top: 0; 
+      right: 0;
+      width: ptr(43px); 
+      padding: ptr(44px) 0 ptr(44px) ptr(12px); 
+      font-size: $fontsize-small; 
+      color: $list-series-skip-text; 
+      line-height: ptr(20px); 
+      &::before {
+        content: "";
+        height: ptr(117px);
+        position: absolute;
+        top: ptr(6px);
+        left: 0;
+        border-left: solid $list-series-border 1px; 
+      }
+      .icon-arrow-right {
+        position: absolute;
+        top: 50%;
+        right: ptr(2px);
+        margin-top: ptr(-10px);
+        font-size: ptr(12px);
+      }
+    }
+  }
+}

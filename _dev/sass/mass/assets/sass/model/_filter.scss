@@ -1,0 +1,109 @@
+@charset "UTF-8";
+//筛选控件
+$filter-text:                    $white;                
+$filter-base:                    #374053;
+$filter-location-text:           $gray-text-lighter;
+$filter-location-border:         #374053;
+$filter-location-text-highlight: $white;
+$filter-location-skip-text:      $white;
+$filter-option-text:             $white;
+$filter-option-base:             #525b6f;          
+$filter-option-border:           #525b6f;
+$filter-option-border-activate:  $white; 
+$filter-option-text-disabled:    #2b3750;
+.filter {
+  position: relative;
+  color: $filter-text;
+  line-height: 1;
+  background-color: $filter-base;
+  border-radius: $radius;
+  h4,
+  h5 {
+    font-size: $fontsize-small;
+    padding: ptr(12px) ptr(8px) ptr(4px);
+  }
+  .location {
+    position: relative;
+    padding: ptr(12px) 6em ptr(14px) ptr(8px);
+    font-size: $fontsize-default;
+    color: $filter-location-text;
+    @extend %ellipsis-basic;
+    strong { color: $filter-location-text-highlight;}
+    .skip {
+      position: absolute;
+      right: ptr(8px);
+      color: $filter-location-skip-text;
+      &:visited { color: $filter-location-skip-text - #000001;}
+      .icon-arrow-right {
+        display: inline-block;
+        font-size: ptr(12px);
+        margin: ptr(2px) 0 0 ptr(5px);
+        vertical-align: top;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      border-top: solid darken($filter-location-border, 10%) 1px;
+      border-bottom: solid lighten($filter-location-border, 10%) 1px;
+    }
+  }
+  ul {
+    padding: 0 ptr(4px) ptr(8px);
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    @extend %box-sizing-border;
+    width: 100%;
+    padding: ptr(8px) ptr(4px) 0;
+    > a,
+    > span {
+      display: block;
+      padding: ptr(9px) ptr(8px);
+      font-size: $fontsize-default;
+      color: $filter-option-text;
+      text-align: left;
+      @extend %ellipsis-basic;
+      background: $filter-option-base;
+      border: solid $filter-option-border 1px;
+      border-radius: $radius;
+      &:visited { color: $filter-option-text - #000001;}
+      &.activate { border-color: $filter-option-border-activate;}
+      &.disabled {
+        color: $filter-option-text-disabled;
+        pointer-events: none;
+        &:visited { color: $filter-option-text-disabled - #000001;}
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: ptr(-8px);
+    left: 50%;
+    @include triangle(top, ptr(8px), $filter-base);
+    margin-left: ptr(-8px);
+  }
+  &.column2 li { width: 50%;}
+  &.column3 li { 
+    width: 33.333%;
+    &:nth-child(3n) { width: 33.334%;}
+  }
+  &.column4 li { width: 25%;}
+  &.column5 li { width: 20%;}
+  &.column2 li,
+  &.column3 li,
+  &.column4 li,
+  &.column5 li {
+    a,span { 
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    } 
+  }
+}

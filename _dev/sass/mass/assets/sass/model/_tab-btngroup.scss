@@ -1,0 +1,29 @@
+@charset "UTF-8";
+//按钮组控件
+$tab-btngroup-border:          $gray-border-lighter;
+$tab-btngroup-text-activate:   $white;
+$tab-btngroup-base-activate:   $blue-light;
+$tab-btngroup-border-activate: $blue-light;
+.tab-btngroup {
+  line-height: 1;
+  overflow: hidden;
+  .btn {
+    float: left;
+    background-color: $white;
+    border-color: $tab-btngroup-border;
+    border-radius: 0;
+    &:first-child { border-radius: $radius 0 0 $radius;}
+    &:last-child { border-radius: 0 $radius $radius 0;}
+    &:nth-child(n + 2) {
+      margin-left: -1px;
+    }
+    &.activate {
+      position: relative;
+      z-index: 10;
+      color: $tab-btngroup-text-activate;
+      background-color: $tab-btngroup-base-activate;
+      border-color: $tab-btngroup-border-activate;
+      &:visited { color: $tab-btngroup-text-activate - #000001;}
+    }
+  }
+}

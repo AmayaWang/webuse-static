@@ -1,0 +1,431 @@
+@charset "UTF-8";
+@import "model/base/css3.scss";
+@import "model/base/mixin.scss";
+@import "model/base/media-queries.scss";
+//看图控件
+.icon-silimg::before             { content: ""; display: inline-block; vertical-align: top; background: url(http://s.autoimg.cn/mass/v2/img/icon-silimg-v20150930.png) no-repeat; background-size: 30px auto;}
+.icon-silimg-back::before        { width: 9px; height: 16px; background-position: 0 0;}
+.icon-silimg-comment::before     { width: 15px; height: 12px; background-position: 0 -30px;}
+.icon-silimg-cross::before       { width: 18px; height: 18px; background-position: 0 -60px;}
+.icon-silimg-star::before        { width: 14px; height: 14px; background-position: 0 -90px;}
+.icon-silimg-star-fill::before   { width: 14px; height: 14px; background-position: 0 -120px;}
+.icon-silimg-share::before       { width: 16px; height: 15px; background-position: 0 -150px;}
+.icon-silimg-text::before        { width: 13px; height: 16px; background-position: 0 -180px;}
+.fn-hide { display: none!important;}
+@-webkit-keyframes transIn{
+  0%{
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes transIn{
+  0%{
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes transOut{
+  0%{ 
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-webkit-keyframes transOut{
+  0%{ 
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.w-silimg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1010;
+  font-family: "STHeiti","Arial","sans-serif";
+  line-height: 1;
+  background-color: #000;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    width: 100%;
+    height: 40px;
+    @include gradient-vertical(#000, rgba(0,0,0,0));
+  }
+  > h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    @extend %box-sizing-border;
+    width: 100%;
+    margin: 0;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #fff;
+    @extend %ellipsis-basic;
+    text-align: center;
+  }
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @extend %box-sizing-border;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 60px 0 98px;
+      text-align: center;
+      @include display-flex;
+      @include justify-content(center);
+      @include align-items;
+      &.video::after {
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        margin: -47px 0 0 -28px;
+        width: 56px;
+        height: 56px;
+        background: url(http://s.autoimg.cn/mass/v2/img/icon-play-trigger.png) no-repeat;
+        background-size: 100%;
+        pointer-events: none;
+      }
+    }
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      background: url(http://s.autoimg.cn/mass/v2/img/holdimg.png) no-repeat center center;
+      background-size: 120px auto;
+    }
+  }
+  figure {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    word-wrap:break-word;word-break:break-all;
+    background-color: rgba(0,0,0,0.5);
+	@include translate3D(0,0,0);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 11px;
+      @include gradient-vertical(rgba(0,0,0,0), #000);
+      pointer-events: none;
+    }
+    figcaption {
+      margin: 12px 12px 0;
+      padding: 0;
+      font-size: 16px;
+      color: #fff;
+    }
+    p {
+      height: 98px;
+      margin: 8px 4px 2px 12px;
+      padding-right: 6px;
+      font-size: 14px;
+      color: #c3c3c3;
+      line-height: 22px;
+      text-align: justify;
+      overflow: auto;
+      @extend %scrolling-touch;
+      &::-webkit-scrollbar { width: 5px;}
+      &::-webkit-scrollbar-thumb:vertical { background-color: #c3c3c3;}
+      a {
+        color: #2f75bb;
+        text-decoration: none;
+      }
+    }
+  }
+  .console {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 40px;
+    background-color: #374053;
+    .num {
+      float: left;
+      padding: 11px 12px;
+      font-size: 18px;
+      color: #fff;
+      strong { color: #ff6600;}
+    }
+    .icon-silimg-comment {
+      float: right;
+      padding: 13px 12px;
+      font-size: 14px;
+      color: #fff;
+      &::before {
+        margin: 1px 8px 0 0;
+        vertical-align: top;
+      }
+    }
+    .icon-silimg-share {
+      float: right;
+      padding: 12px 12px 11px;
+    }
+    .icon-silimg-star,
+    .icon-silimg-star-fill {
+      float: right;
+      padding: 12px;
+    }
+  }
+  > .icon-silimg-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 12px 12px 12px 8px;
+  }
+  .icon-silimg-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 13px 12px 11px;
+    font-size: 14px;
+    font-style: normal;
+    color: #fff;
+    &:visited { color: #fffffe;}
+    &::before {
+      margin: -1px 8px 1px 0;
+      vertical-align: top;
+    }
+  }
+  .text-tips {
+    position: absolute;
+    top: 50px;
+    right: 12px;
+    z-index: 10;
+    @extend %box-sizing-border;
+    width: 200px;
+    padding: 8px 26px 12px;
+    background-color: rgba(255,2555,2555,0.8);
+    border-radius: 2px;
+    .info {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.5;
+      text-align: left;
+      text-align: justify;
+    }
+    .handle {
+      width: 72px;
+      padding: 7px 0;
+      margin: 8px auto;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      background-color: #2f75bb;
+      border-radius: 2px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 154px;
+      @include triangle(top, 16px, rgba(255,2555,2555,0.8));
+    }
+  }
+  .recommend {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 19;
+    @extend %box-sizing-border;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    &.transIn{
+      -webkit-animation: transIn 0.6s both;
+      animation: transIn 0.6s both;
+    }
+    &.transOut{
+      -webkit-animation: transOut 0.6s both;
+      animation: transOut 0.6s both;
+    }
+    header {
+      margin: 0;
+      padding: 10px 0;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @extend %box-sizing-border;
+      width: 100%;
+      height: 338px;
+      margin: -169px 0 0;
+      padding: 0 8px;
+      list-style: none;
+      line-height: 1;
+      overflow: hidden;
+      li { 
+        float: left;
+        @extend %box-sizing-border;
+        width: 50%;
+        padding: 0 4px;
+        &:nth-child(n + 3) { padding-top: 12px;}
+      }
+      a { 
+        display: block;
+        width: 140px;
+        margin: 0 auto;
+        background-color: #f5f5f5;
+        text-decoration: none;
+      }
+      img {
+        width: 140px;
+        height: 105px;
+      }
+      strong {
+        position: relative; 
+        display: block;
+        height: 48px;
+        padding: 4px 6px;
+        font-size: 16px;
+        color: #444;
+        line-height: 1.5;
+      }
+      @include min-screen(360px) {
+        height: 320px;
+        margin-top: -160px;
+        a { width: 160px;}
+        img {
+          width: 160px;
+          height: 120px;
+        }
+        strong {
+          height: 24px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      @include min-screen(375px) {
+        height: 330px;
+        margin-top: -165px;
+        a { width: 167px;}
+        img {
+          width: 167px;
+          height: 125px;
+        }
+      }
+      @include min-screen(412px) {
+        height: 358px;
+        margin-top: -179px;
+        a { width: 186px;}
+        img {
+          width: 186px;
+          height: 139px;
+        }
+      }
+    }
+    .homepage {
+      position: absolute;
+      bottom: 0;
+      bottom: -webkit-calc((100% - 338px) / 2 / 2 - 20px);
+      bottom: calc((100% - 338px) / 2 / 2 - 20px);
+      left: 50%;
+      width: 40%;
+      margin-left: -20%;
+      padding: 12px 0;
+      font-size: 16px;
+      color: #2f75bb;
+      text-decoration: none;
+      text-align: center;
+      background-color: rgba(0,0,0,0.8);
+      .icon-silimg-back {
+        margin-right: 8px;
+        &::before { background-position: -20px 0;}
+      }
+      @include min-screen(360px) {
+        bottom: 10px;
+        bottom: -webkit-calc((100% - 320px) / 2 / 2 - 20px);
+        bottom: calc((100% - 320px) / 2 / 2 - 20px);
+      }
+      @include min-screen(375px) {
+        bottom: 10px;
+        bottom: -webkit-calc((100% - 330px) / 2 / 2 - 20px);
+        bottom: calc((100% - 320px) / 2 / 2 - 20px);
+      }
+      @include min-screen(412px) {
+        bottom: 10px;
+        bottom: -webkit-calc((100% - 358px) / 2 / 2 - 20px);
+        bottom: calc((100% - 320px) / 2 / 2 - 20px);
+      }
+    }
+  }
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 21;
+    @extend %box-sizing-border;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0 98px;
+    background-color: #000;
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items;
+    video {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .icon-silimg-cross {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      padding: 11px 8px;
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
+}

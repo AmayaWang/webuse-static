@@ -1,0 +1,34 @@
+@charset "UTF-8";
+//分页控件
+$page-images-text:          $gray-text;
+$page-images-base:          $gray-base-light;
+$page-images-border:        $gray-border;
+$page-images-text-disabled: $gray-text-lighter;
+.page-images {
+  line-height: 1;
+  overflow: hidden;
+  .prev,
+  .next {
+    float: left;
+    width: ptr(62px);
+    padding: ptr(9px) 0;
+    font-size: $fontsize-default;
+    color: $page-images-text;
+    text-align: center;
+    background-color: $page-images-base;
+    border: solid $page-images-border 1px;
+    border-radius: $radius;
+    &.disabled {
+      color: $page-images-text-disabled;
+      pointer-events: none;
+    }
+  }
+  .next { float: right;}
+  .num {
+    display: block;
+    padding: ptr(10px) 0;
+    font-size: $fontsize-default;
+    color: $page-images-text;
+    text-align: center;
+  }
+}

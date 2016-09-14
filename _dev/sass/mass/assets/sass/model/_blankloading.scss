@@ -1,0 +1,14 @@
+@charset "UTF-8";
+//加载中控件
+$blankloading-text: $gray-text-light;
+.blankloading {
+  padding: ptr(48px) 0;
+  font-size: $fontsize-tiny;
+  color: $blankloading-text;
+  line-height: 1;
+  text-align: center;
+  .load {
+    margin-right: ptr(8px);
+    vertical-align: top;
+  }
+}

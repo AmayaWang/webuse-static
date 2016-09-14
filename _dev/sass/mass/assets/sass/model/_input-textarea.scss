@@ -1,0 +1,23 @@
+@charset "UTF-8";
+//文本域
+$input-textarea-text:         $gray-text;
+$input-textarea-base:         $white;
+$input-textarea-border:       $gray-border;
+$input-textarea-border-focus: $blue-light;
+.input-textarea {
+  @extend %appearance;
+  @extend %box-sizing-border;
+  width: 100%;
+  height: ptr(180px);
+  padding: ptr(5px) ptr(8px);
+  font-size: $fontsize-default;
+  color: $input-textarea-text;
+  line-height: ptr(24px);
+  background: $input-textarea-base;
+  border: solid $input-textarea-border 1px;
+  border-radius: $radius;
+  resize: none;
+  @include box-shadow(1px 1px 2px #d6d6d6 inset); 
+  &::-webkit-inner-spin-button { display: none;}
+  &:focus { border-color: $input-textarea-border-focus;}
+}

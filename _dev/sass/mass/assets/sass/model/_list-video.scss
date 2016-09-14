@@ -1,0 +1,107 @@
+@charset "UTF-8";
+//视频列表控件
+$list-video-text:      $gray-text;
+$list-video-base:      $gray-base-light;
+$list-video-long-text: $white;
+$list-video-play-text: $gray-text-light;
+$list-video-icon-play: $gray-text-lighter;
+$list-video-time-text: $gray-text-light;
+.list-video {
+  margin-left: 8px;
+  margin-right: 8px;
+  line-height: 1;
+  overflow: hidden;
+  li { 
+    float: left;
+    @extend %box-sizing-border;
+    width: 50%;
+    padding: ptr(12px) 4px 0;
+  }
+  a {
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    background-color: $list-video-base;
+    overflow: hidden;
+  }
+  img {
+    width: 140px;
+    height: 79px;
+    margin-bottom: ptr(-16px);
+    @extend %holdimg;
+  }
+  .long {
+    position: relative;
+    z-index: 10;
+    display: block;
+    @extend %box-sizing-border;
+    width: 100%;
+    height: ptr(16px);
+    padding: ptr(2px) ptr(6px);
+    font-size: $fontsize-tiny;
+    color: $list-video-long-text;
+    text-align: right;
+    @include gradient-vertical(rgba(0,0,0,0), rgba(0,0,0,0.5));
+  }
+  strong {
+    display: block;
+    height: ptr(48px);
+    margin: ptr(4px) ptr(6px) 0;
+    font-size: $fontsize-default;
+    color: $list-video-text;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .play {
+    float: left;
+    margin: ptr(4px) 0 ptr(8px) ptr(6px);
+    font-size: $fontsize-tiny;
+    color: $list-video-play-text;
+    .icon-play {
+      position: relative;
+      margin-right: ptr(7px);
+      color: $list-video-icon-play;
+    }
+  }
+  .comment {
+    float: right;
+    margin: ptr(4px) ptr(6px) ptr(8px) 0;
+    font-size: $fontsize-tiny;
+    color: $list-video-play-text;
+    .icon-comment {
+      position: relative;
+      margin-right: ptr(7px);
+      color: $list-video-icon-play;
+    }
+  }
+  time {
+    float: right;
+    margin: ptr(6px) ptr(6px) ptr(10px) 0;
+    font-size: $fontsize-tiny;
+    color: $list-video-time-text;
+  }
+  @include min-screen(360px) {
+    a { width: 160px;}
+    img {
+      width: 160px;
+      height: 90px;
+    }
+  }
+  @include min-screen(375px) {
+    a { width: 167px;}
+    img {
+      width: 167px;
+      height: 93px;
+    }
+  }
+  @include min-screen(414px) {
+    a { width: 187px;}
+    img {
+      width: 187px;
+      height: 105px;
+    }
+  }
+}

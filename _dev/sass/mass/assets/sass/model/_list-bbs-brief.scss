@@ -1,0 +1,18 @@
+@charset "UTF-8";
+//简版论坛列表控件
+$list-bbs-brief-text:   $gray-text;
+$list-bbs-brief-base:   $white;
+$list-bbs-brief-border: $gray-border-lighter;
+.list-bbs-brief {
+  background-color: $list-bbs-brief-base;
+  line-height: 1;
+  li { border-bottom: solid $list-bbs-brief-border 1px;}
+  a { 
+    position: relative;
+    display: block;
+    padding: ptr(12px) ptr(4px);
+    font-size: $fontsize-default; 
+    color: $list-bbs-brief-text;
+    @extend %ellipsis-basic;
+  }
+}

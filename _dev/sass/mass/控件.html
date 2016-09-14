@@ -1,0 +1,1556 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <title>控件</title>
+  <link rel="stylesheet" href="assets/css/widget.css">
+</head>
+<body>
+  <div class="w-header"><a class="shoot" href="#w-shoot"></a>MASS控件</div>
+  <a class="w-guide" href="http://10.168.0.151/mass/M/mass%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/MASS%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83.html">开发规范</a>
+  <a class="w-iconfont" href="http://10.168.0.151/mass/M/mass/assets/font/demo.html">字体库</a>
+  <div class="w-shoot" id="w-shoot">
+    <h1>MASS控件<sup>2.0</sup><br><small>控件名 即 sass文件名。</small></h1>
+    <a href="#btn">btn</a>
+    <a href="#header">header</a>
+    <a href="#nav">nav</a>
+    <a href="#nav-channel">nav-channel</a>
+    <a href="#nav-bread">nav-bread</a>
+    <a href="#nav-final">nav-final</a>
+    <a href="#menu">menu</a>
+    <a href="#tab">tab</a>
+    <a href="#tab-secondary">tab-secondary</a>
+    <a href="#tab-btngroup">tab-btngroup</a>
+    <a href="#lettergroup">lettergroup</a>
+    <a href="#filter">filter</a>
+    <a href="#blankloading">blankloading</a>
+    <a href="#overallloading">overallloading</a>
+    <a href="#carousel-images">carousel-images</a>
+    <a href="#list-info">list-info</a>
+    <a href="#list-info-brief">list-info-brief</a>
+    <a href="#list-video">list-video</a>
+    <a href="#list-bbs">list-bbs</a>
+    <a href="#list-bbs-brief">list-bbs-brief</a>
+    <a href="#list-thumb">list-thumb</a>
+    <a href="#list-thumb-sort">list-thumb-sort</a>
+    <a href="#list-mall">list-mall</a>
+    <a href="#list-dealer">list-dealer</a>
+    <a href="#list-pricedown">list-pricedown</a>
+    <a href="#list-pricedown-brief">list-pricedown-brief</a>
+    <a href="#list-series">list-series</a>
+    <a href="#list-series-small">list-series-small</a>
+    <a href="#list-series-tiny">list-series-tiny</a>
+    <a href="#list-cartype">list-cartype</a>
+    <a href="#list-2sc">list-2sc</a>
+    <a href="#page">page</a>
+    <a href="#page-images">page-images</a>
+    <a href="#input-textfield">input-textfield</a>
+    <a href="#input-textarea">input-textarea</a>
+    <a href="#radio">radio</a>
+    <a href="#checkbox">checkbox</a>
+    <a href="#comment-publish">comment-publish</a>
+    <a href="#flowergrade">flowergrade</a>
+    <a href="#stargrade">stargrade</a>
+    <a href="#praisepoint">praisepoint</a>
+    <a href="#tips">tips</a>
+    <a href="#alert">alert</a>
+    <a href="#bubble">bubble</a>
+    <a href="#search">search</a>
+    <a href="#application">application</a>
+    <a href="#footer">footer</a>
+    <a href="#advertise">advertise</a>
+    <a href="#backtop">backtop</a>
+    <a href="#list-form">list-form</a>
+  </div>
+  <a class="w-shoot-mask" href="###"></a>
+  <h2 class="w-anchor" id="btn">btn</h2>
+  <!--按钮-->
+  <span class="btn">按钮</span><br/><br/>
+  <span class="btn small">小按钮</span><br/><br/>
+  <span class="btn full">通栏按钮<i class="iconfont icon-arrow-left"></i><i class="iconfont icon-arrow-right"></i><i class="iconfont icon-arrow-top"></i><i class="iconfont icon-arrow-bottom"></i></span><br/>
+  <span class="btn primary">主要按钮</span>
+  <span class="btn primary"><i class="iconfont icon-mobile"></i>询价按钮</span><br/><br/>
+  <span class="btn highlight">高亮按钮</span><br/><br/>
+  <span class="btn telphone"><i class="iconfont icon-telphone"></i>电话按钮</span>
+  <span class="btn telphone"><i class="iconfont icon-telphone-24h"></i>24h电话按钮</span><br/><br/>
+  <span class="btn disabled">不可点击按钮</span><br/><br/>
+  <span class="btn loading"><i class="load"></i>加载按钮</span><br/><br/>
+  <span class="btn dropdown">下拉按钮<i class="iconfont icon-arrow-bottom"></i></span><br/><br/>
+  <div class="btn dropdown full">通栏下拉按钮<i class="iconfont icon-arrow-bottom"></i></div><br/>
+  <select class="btn select">
+    <option>select下拉按钮</option>
+  </select>
+  <br/><br/>
+  <select class="btn select full">
+    <option>通栏select下拉按钮</option>
+  </select>
+  <!--end按钮-->
+
+  <h2 class="w-anchor" id="header">header</h2>
+  <!--头部-->
+  <header class="header">
+    <a class="athm" href="#">汽车之家</a>
+    <a class="login" href="#">登录</a>
+    <a class="user" href="#"><img src="assets/images/picture/64x64.png" /><i>99</i></a>
+    <a class="download" href="#">App下载</a>
+  </header>
+  <!--end头部-->
+
+  <h2 class="w-anchor" id="nav">nav</h2>
+  <!--主导航-->
+  <nav class="nav">
+    <a href="#">文章</a>
+    <a href="#">找车</a>
+    <a href="#">二手车</a>
+    <a href="#">口碑</a>
+    <a href="#">论坛</a>
+    <a href="#">视频</a>
+    <a href="#">快报</a>
+    <a href="#">经销商</a>
+    <a href="#">降价</a>
+    <a href="#">车商城</a>
+  </nav>
+  <!--end主导航-->
+
+  <h2 class="w-anchor" id="nav-channel">nav-channel</h2>
+  <!--频道导航-->
+  <nav class="nav-channel">
+    <a class="athm" href="#">汽车之家</a>
+    <span class="channel">文章</span>
+    <a class="icon icon-user" href="#"></a>
+  </nav>
+  <br/>
+  <nav class="nav-channel">
+    <a class="athm" href="#">汽车之家</a>
+    <span class="channel">文章</span>
+    <a class="user" href="#"><img src="assets/images/picture/64x64.png"><i>99</i></a>
+  </nav>
+  <!--end频道导航-->
+
+  <h2 class="w-anchor" id="nav-bread">nav-bread</h2>
+  <!--面包屑导航-->
+  <nav class="nav-bread">
+    <i class="icon icon-menu" data-role="sidebar"></i>
+    <i class="mask-left"></i>
+    <div class="bread" data-role="scroller">
+      <a href="#">文章</a><i class="iconfont icon-forward"></i><a href="#">内容内容内容内容内容内容内容内容</a><i class="iconfont icon-forward"></i><span>试驾</span>
+    </div>
+    <i class="mask-right"></i>
+    <a class="icon icon-user" href="#"></a>
+  </nav>
+  <br/>
+  <nav class="nav-bread">
+    <i class="icon icon-menu" data-role="sidebar"></i>
+    <i class="mask-left"></i>
+    <div class="bread" data-role="scroller">
+      <a href="#">文章</a><i class="iconfont icon-forward"></i><a href="#">内容内容内容内容内容内容内容内容</a><i class="iconfont icon-forward"></i><span>试驾</span>
+    </div>
+    <i class="mask-right"></i>
+    <a class="user" href="#"><img src="assets/images/picture/64x64.png"><i>99</i></a>
+  </nav>
+  <br/>
+  <nav class="nav-bread bottom">
+    <a class="icon icon-home" href="#"></a>
+    <i class="mask-left"></i>
+    <div class="bread" data-role="scroller">
+      <a href="#">文章</a><i class="iconfont icon-forward"></i><a href="#">内容内容内容内容内容内容内容内容</a><i class="iconfont icon-forward"></i><span>试驾</span>
+    </div>
+    <i class="mask-right"></i>
+  </nav>
+  <!--end面包屑导航-->
+
+  <h2 class="w-anchor" id="nav-final">nav-final</h2>
+  <!--终极导航-->
+  <nav class="nav-final">
+    <p>文章</p>
+    <a class="back" href="#"><i class="iconfont icon-backward"></i>返回</a>
+    <a class="download" href="#">App下载</a>
+  </nav>
+  <!--end终极导航-->
+
+  <h2 class="w-anchor" id="menu">menu</h2>
+  <!--菜单-->
+  <section class="menu">
+    <p>
+      <a class="activate" href="#">全部</a>
+      <a class="disabled" href="#">新闻</a>
+      <a href="#">试驾</a>
+      <a href="#">导购</a>
+      <a href="#">用车</a>
+      <a href="#">游记</a>
+      <span>空白</span>
+      <a class="more" href="#"><abbr>更多<i class="iconfont icon-arrow-bottom"></i></abbr></a>
+    </p>
+    <div class="more-details">
+      <a href="#">内容</a>
+      <a href="#">内容</a>
+      <a href="#">内容</a>
+      <a href="#">内容</a>
+    </div>
+  </section>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <section class="menu slide">
+    <p data-role="overSlide">
+      <a href="#">全部</a>
+      <a href="#">新闻</a>
+      <a class="activate" href="">试驾</a>
+      <a href="#">导购</a>
+      <a href="#">用车</a>
+      <a href="#">游记</a>
+    </p>
+  </section>
+  <!--end菜单-->
+
+  <h2 class="w-anchor" id="tab">tab</h2>
+  <!--标签-->
+  <div class="tab">
+    <span class="item activate">标签</span>
+  </div>
+  <br/>
+  <div class="tab">
+    <span class="item activate">标签</span>
+    <span class="item">标签</span>
+  </div>
+  <br/>
+  <div class="tab">
+    <span class="item activate">标签</span>
+    <div class="linkgroup">
+      <a href="#">说客</a>
+      <a href="#">视屏</a>
+      <a href="#">评测</a>
+    </div>
+  </div>
+  <br/>
+  <div class="tab">
+    <span class="item activate">标签</span>
+    <a class="btn small skip" href="#">进入频道页<i class="iconfont icon-arrow-right"></i></a>
+  </div>
+  <!--end标签-->
+
+  <h2 class="w-anchor" id="tab-secondary">tab-secondary</h2>
+  <!--二级标签-->
+  <div class="tab-secondary">
+    <span class="item activate">二级标签</span>
+  </div>
+  <br/>
+  <div class="tab-secondary">
+    <span class="item activate">二级标签</span>
+    <span class="item">二级标签</span>
+  </div>
+  <br/>
+  <div class="tab-secondary">
+    <span class="item activate">二级标签</span>
+    <span class="onoff">收起<i class="iconfont icon-arrow-top"></i></span>
+  </div>
+  <br/>
+  <div class="tab-secondary">
+    <span class="item activate">二级标签</span>
+    <span class="onoff">展开<i class="iconfont icon-arrow-bottom"></i></span>
+  </div>
+  <!--end二级标签-->
+
+  <h2 class="w-anchor" id="tab-btngroup">tab-btngroup</h2>
+  <!--按钮标签-->
+  <div class="tab-btngroup">
+    <span class="btn">1.0L</span>
+    <span class="btn activate">2.0L</span>
+    <span class="btn">3.0L</span>
+    <span class="btn">4.0L</span>
+  </div>
+  <!--end按钮标签-->
+
+  <h2 class="w-anchor" id="lettergroup">lettergroup</h2>
+  <!--字母组-->
+  <ul class="lettergroup column4">
+    <li><span>A&nbsp;B&nbsp;C</span></li>
+    <li><span>D&nbsp;F&nbsp;G</span></li>
+    <li><span>H&nbsp;J&nbsp;K</span></li>
+    <li><span>L&nbsp;M&nbsp;N</span></li>
+    <li><span>O&nbsp;Q&nbsp;R</span></li>
+    <li><span>S&nbsp;T&nbsp;W</span></li>
+    <li><span>X&nbsp;Y&nbsp;Z</span></li>
+    <li><span class="highlight">推荐</span></li>
+  </ul>
+  <br/>
+  <ul class="lettergroup column7">
+    <li><span>A</span></li>
+    <li><span>B</span></li>
+    <li><span>C</span></li>
+    <li><span>D</span></li>
+    <li><span>E</span></li>
+    <li><span>F</span></li>
+    <li><span>G</span></li>
+    <li><span>H</span></li>
+    <li><span class="disabled">I</span></li>
+    <li><span>J</span></li>
+    <li><span>K</span></li>
+    <li><span>L</span></li>
+    <li><span>M</span></li>
+    <li><span>N</span></li>
+    <li><span class="disabled">O</span></li>
+    <li><span>P</span></li>
+    <li><span>Q</span></li>
+    <li><span>R</span></li>
+    <li><span>S</span></li>
+    <li><span>T</span></li>
+    <li><span class="disabled">U</span></li>
+    <li><span class="disabled">V</span></li>
+    <li><span>W</span></li>
+    <li><span>X</span></li>
+    <li><span>Y</span></li>
+    <li><span>Z</span></li>
+  </ul>
+  <!--end字母组-->
+
+  <h2 class="w-anchor" id="filter">filter</h2>
+  <!--筛选-->
+  <div class="filter">
+    <h4>标题</h4>
+    <ul>
+      <li><span class="activate">内容</span></li>
+      <li><span class="disabled">内容</span></li>
+      <li><span>内容</span></li>
+      <li><span>内容</span></li>
+    </ul>
+  </div>
+  <br/>
+  <div class="filter column2">
+    <div class="location">
+      当前城市：<strong>北京</strong>
+      <a class="skip" href="#">切换城市<i class="iconfont icon-arrow-right"></i></a>
+    </div>
+    <ul>
+      <li><span class="activate">内容</span></li>
+      <li><span class="disabled">内容</span></li>
+      <li><span>内容</span></li>
+      <li><span>内容</span></li>
+    </ul>
+  </div>
+  <!--end筛选-->
+
+  <h2 class="w-anchor" id="blankloading">blankloading</h2>
+  <!--加载中-->
+  <div class="blankloading"><i class="load"></i>加载中...</div>
+  <!--end加载中-->
+
+  <h2 class="w-anchor" id="overallloading">overallloading</h2>
+  <!--全局加载中-->
+  <div class="overallloading" style="position: static; margin: 0;">
+    <i class="load"></i>
+    加载中
+  </div>
+  <!--end全局加载中-->
+
+  <h2 class="w-anchor" id="carousel-images">carousel-images</h2>
+  <!--轮播图-->
+  <section class="carousel-images" data-role="carousel" data-timeout="3000" data-autoplay="false" data-speed="300">
+    <ul class="carousel">
+      <li class="c-item"><a href="#"><img src="assets/images/picture/640x320.png" /></a></li>
+      <li class="c-item"><a href="#"><img src="assets/images/picture/640x320.png" /></a></li>
+      <li class="c-item"><a href="#"><img src="assets/images/picture/640x320.png" /></a></li>
+      <li class="c-item"><a href="#"><img src="assets/images/picture/640x320.png" /></a></li>
+      <li class="c-item"><a href="#"><img src="assets/images/picture/640x320.png" /></a></li>
+    </ul>
+    <h2>标题<span>1/5</span></h2>
+  </section>
+  <!--end轮播图-->
+
+  <h2 class="w-anchor" id="list-info">list-info</h2>
+  <!--资讯列表-->
+  <ul class="list-info">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪</h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪</h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+        <em class="mark-first">首发</em>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪</h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+        <em class="mark-sole">独家</em>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪<em class="mark-shuoke">说客</em></h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪<em class="mark-topic">专题</em></h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪<em class="mark-newsflash">快报</em></h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪<em class="mark-2sc">二手车</em></h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li class="albumimgs">
+      <a href="#">
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪</h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+        <p>
+          <span><img src="assets/images/picture/180x135.png" /></span>
+          <span><img src="assets/images/picture/180x135.png" /></span>
+          <span><img src="assets/images/picture/180x135.png" /></span>
+        </p>
+      </a>
+    </li>
+    <li class="plaintext">
+      <a href="#">
+        <h4>本月上市 吉利新帝豪EC7正式更名新帝豪</h4>
+        <time>2014-06-06</time>
+        <span class="comment">28<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li class="adv-promote">
+      <a href="">
+        <img src="assets/images/picture/180x135.png">
+        <span class="noa">中方出让1% 长安铃木股权结构将变更</span>
+        <span class="nob"><em>推广</em></span>
+      </a>
+    </li>
+  </ul>
+  <!--end资讯列表-->
+
+  <h2 class="w-anchor" id="list-info-brief">list-info-brief</h2>
+  <!--资讯列表简版-->
+  <ul class="list-info-brief">
+    <li>
+      <a href="#">
+        南京价格不给力新蒙旗舰异地购车记超<span class="comment">2000<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        南京价格不给力新蒙旗舰异地购车记超<span class="comment">2000<i class="iconfont icon-comment"></i></span>
+      </a>
+    </li>
+  </ul>
+  <!--end资讯列表简版-->
+
+  <h2 class="w-anchor" id="list-video">list-video</h2>
+  <!--视频列表-->
+  <ul class="list-video">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x158.png">
+        <span class="long">15:00</span>
+        <strong>每日新车评:小型SUV群测越野，ASX怒刷存在感！</strong>
+        <span class="play"><i class="iconfont icon-play"></i>2000</span>
+        <time>1年前</time>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x158.png">
+        <span class="long">15:00</span>
+        <strong>每日新车评:小型SUV群测越野，ASX怒刷存在感！</strong>
+        <span class="play"><i class="iconfont icon-play"></i>2000</span>
+        <span class="comment"><i class="iconfont icon-comment"></i>72</span>
+      </a>
+    </li>
+  </ul>
+  <!--end视频列表-->
+
+  <h2 class="w-anchor" id="list-bbs">list-bbs</h2>
+  <!--论坛列表-->
+  <ul class="list-bbs">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <strong>提汉兰达2.7L精英版</strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <strong>提汉兰达2.7L精英版</strong>
+      </a>
+    </li>
+  </ul>
+  <!--end论坛列表-->
+
+  <h2 class="w-anchor" id="list-bbs-brief">list-bbs-brief</h2>
+  <!--论坛列表简版-->
+  <ul class="list-bbs-brief">
+    <li>
+      <a href="#">都是着急惹的祸 违规超车之酿事故</a>
+    </li>
+    <li>
+      <a href="#">都是着急惹的祸 违规超车之酿事故</a>
+    </li>
+  </ul>
+  <!--end论坛列表简版-->
+
+  <h2 class="w-anchor" id="list-thumb">list-thumb</h2>
+  <!--图片列表-->
+  <ul class="list-thumb">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <strong>可怕 皮卡不慎跌落山崖</strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <strong>可怕 皮卡不慎跌落山崖</strong>
+      </a>
+    </li>
+  </ul>
+  <!--end图片列表-->
+
+  <h2 class="w-anchor" id="list-thumb-sort">list-thumb-sort</h2>
+  <!--图片列表分类-->
+  <ul class="list-thumb-sort">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <strong>外观<em>200张</em></strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <strong>座椅<em>200张</em></strong>
+      </a>
+    </li>
+  </ul>
+  <!--end图片列表分类-->
+
+  <h2 class="w-anchor" id="list-mall">list-mall</h2>
+  <!--车商城列表-->
+  <ul class="list-mall">
+    <li>
+      <h4>2014款 2.0L 款蓝天时尚版</h4>
+      <p class="price">车商城惊爆价：<strong>22.78<em>万</em></strong></p>
+      <p class="event"><em class="mark-event">赠品</em>专属加装配置总价值2016万元、购车送200元油卡、支持分期付款，支付定金：100元</p>
+      <p class="handle">
+        <a class="telphone" href="#"><i class="iconfont icon-telphone-24h"></i>电话咨询</a>
+        <a class="buying" href="#">立即抢购</a>
+      </p>
+    </li>
+    <li>
+      <h4>2014款 2.0L 款蓝天时尚版</h4>
+      <p class="price">车商城惊爆价：<strong>22.78<em>万</em></strong></p>
+      <p class="event"><em class="mark-event">活动</em>专属加装配置总价值2016万元、购车送200元油卡、支持分期付款，支付定金：100元</p>
+      <p class="handle">
+        <a class="telphone" href="#"><i class="iconfont icon-telphone-24h"></i>电话咨询</a>
+        <a class="buying" href="#">立即抢购</a>
+      </p>
+    </li>
+  </ul>
+  <!--end车商城列表-->
+
+  <h2 class="w-anchor" id="list-dealer">list-dealer</h2>
+  <!--经销商列表-->
+  <ul class="list-dealer">
+    <li class="brandsale">
+      <a class="info" href="#">
+        <img src="assets/images/picture/180x135.png">
+        <h4>汉兰达新年钜惠促销活动</h4>
+        <p class="price">全系最高优惠23000元</p>
+        <em class="mark-brandevent">品牌活动</em>
+        <em class="mark-brandsale">优惠</em>
+        <em class="mark-brandgift">试驾</em>
+      </a>
+      <a class="gift" href="#"><i class="iconfont icon-gift"></i>到店试乘试驾 到店试乘试驾有机会赢得1000元油卡</a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+    </li>
+    <li>
+      <a class="info" href="#">
+        高国服信高德<em class="mark-supply">售全国</em><br/><small>经营品牌：大众、奥迪</small><strong class="price">17.98-23.98<em>万</em></strong>
+      </a>
+      <a class="site" href="#"><i class="iconfont icon-anchor"></i>北京市西城区德胜门（二环德胜门外东北角）</a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+      <a class="sale" href="#"><em class="mark-cu">促</em>马自达6阿特兹现车销售 最低17.98万元</a>
+    </li>
+    <li>
+      <a class="info" href="#">
+        高国服信高德<em class="mark-supply">售全国</em><strong class="price">17.98-23.98<em>万</em></strong>
+      </a>
+      <a class="site withdist" href="#"><i class="iconfont icon-anchor"></i>北京市西城区德胜门（二环德胜门外东北角）<span class="dist">&lt;&nbsp;100m</span></a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone"></i>400-800-1315</a>
+        <a class="btn primary small disabled" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+      <a class="sale" href="#"><em class="mark-cu">促</em>马自达6阿特兹现车销售 最低17.98万元</a>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <h4><span class="type">4S店</span>上海熙福东风风行4S店<em class="mark-supply">售全国</em><br/><small>经营品牌：大众、奥迪</small></h4>
+        <p class="price">17.98<em>万起</em><span class="low">暂无优惠</span></p>
+      </a>
+      <a class="area" href="#">朝阳区<span class="dist">99999.9km</span></a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+    </li>
+    <li>
+      <a class="info withlow" href="#">
+        <h4>上海熙福东风风行4S店<em class="mark-supply">售全国</em></h4>
+        <p class="price">17.98<em>万</em><span class="low">已优惠1.1万</span></p>
+        <p class="detail"><em>优惠限制条件：</em>店内上保险、店内上保、店内上保险</p>
+      </a>
+      <a class="area" href="#">朝阳区</a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone"></i>400-800-1315</a>
+        <a class="btn primary small disabled" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <h4>高国服信高德<i class="iconfont icon-arrow-right"></i><em class="supply">售全国</em></h4>
+        <p class="guide">
+          <span class="stargrade">
+            <span class="dark"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+            <span style="width:90%;" class="light"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+          </span>
+          <strong class="price"><dfn>&yen;</dfn>17.98-23.98<em>万</em></strong>
+        </p>
+      </a>
+      <a class="site" href="#"><i class="iconfont icon-anchor"></i>北京市西城区德胜门（二环德胜门外东北角）</a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+      <a class="sale" href="#"><em class="mark-cu">促</em>马自达6阿特兹现车销售 最低17.98万元</a>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <h4>高国服信高德<i class="iconfont icon-arrow-right"></i><em class="supply">售全国</em></h4>
+        <p class="guide">
+          <span class="stargrade">
+            <span class="dark"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+            <span style="width:90%;" class="light"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+          </span>
+          <span class="brand">经营品牌：大众、奥迪</span>
+        </p>
+      </a>
+      <a class="site" href="#"><i class="iconfont icon-anchor"></i>北京市西城区德胜门（二环德胜门外东北角）</a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+      <a class="sale" href="#"><em class="mark-cu">促</em>马自达6阿特兹现车销售 最低17.98万元</a>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <h4>高国服信高德<i class="iconfont icon-arrow-right"></i><em class="supply">售全国</em></h4>
+        <p class="guide">
+          <span class="stargrade">
+            <span class="dark"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+            <span style="width:90%;" class="light"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+          </span>
+          <span class="brand">经营品牌：大众、奥迪</span>
+        </p>
+      </a>
+      <a class="site withdist" href="#"><i class="iconfont icon-anchor"></i>北京市西城区德胜门（二环德胜门外东北角）<span class="dist">&lt;&nbsp;100m</span></a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+      <a class="sale" href="#"><em class="mark-cu">促</em>马自达6阿特兹现车销售 最低17.98万元</a>
+    </li>
+  </ul>
+  <!--end经销商列表-->
+
+  <h2 class="w-anchor" id="list-pricedown">list-pricedown</h2>
+  <!--降价列表-->
+  <ul class="list-pricedown">
+    <li>
+      <a class="info" href="#">
+        <h4>捷豹XJ 2013款 XJL 5.0 SC 巅峰创世版 四座 降108.08万</h4>
+        <p class="price">
+          <strong>17.98<em>万</em></strong>
+          <span class="range"><i class="iconfont icon-down"></i>1.98<em>万</em><small>(19%)</small></span>
+          <s>23.98万</s>
+        </p>
+      </a>
+      <a class="shop" href="#">
+        温州<i class="split"></i>温州永达路捷汽车
+        <em class="mark-supply">少量现车</em>
+        <em class="mark-supply">售全国</em>
+      </a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <h4>捷豹XJ 2013款 XJL 5.0 SC 巅峰创世版 四座 降108.08万</h4>
+        <p class="price">
+          <strong>17.98<em>万</em></strong>
+          <span class="range"><i class="iconfont icon-down"></i>1.98<em>万</em><small>(19%)</small></span>
+          <s>23.98万</s>
+        </p>
+      </a>
+      <a class="shop" href="#">
+        温州<i class="split"></i>温州永达路捷汽车
+        <em class="mark-supply">少量现车</em>
+        <em class="mark-supply">售全国</em>
+      </a>
+      <p class="handle">
+        <a class="btn telphone small" href="#"><i class="iconfont icon-telphone-24h"></i>400-800-1315</a>
+        <a class="btn primary small disabled" href="#"><i class="iconfont icon-mobile"></i>询底价</a>
+      </p>
+    </li>
+  </ul>
+  <!--end降价列表-->
+
+  <h2 class="w-anchor" id="list-pricedown-brief">list-pricedown-brief</h2>
+  <!--降价列表简版-->
+  <ul class="list-pricedown-brief">
+    <li>
+      <a href="#">
+        <span class="caption">蒙迪欧</span>
+        <span class="range"><i class="iconfont icon-down"></i>1.98<em>万</em></span>
+        <strong>9.99<em>万</em></strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="caption">蒙迪欧</span>
+        <span class="range"><i class="iconfont icon-down"></i>1.98<em>万</em></span>
+        <strong>9.99<em>万</em></strong>
+      </a>
+    </li>
+  </ul>
+  <!--end降价列表简版-->
+
+  <h2 class="w-anchor" id="list-series">list-series</h2>
+  <!--车系列表-->
+  <ul class="list-series">
+    <li class="brandsale">
+      <a class="info" href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <h4>蒙迪欧</h4>
+        <p class="genre">紧凑型车</p>
+        <p class="price">10.5-16.5<em>万</em></p>
+      </a>
+      <a class="skip" href="#">品牌<br>活动<i class="iconfont icon-arrow-right"></i></a>
+    </li>
+    <li class="tuansale">
+      <a class="info" href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <h4>蒙迪欧</h4>
+        <p class="genre">紧凑型车</p>
+        <p class="price">10.5-16.5<em>万</em></p>
+      </a>
+      <a class="skip" href="#">参加<br>团购<i class="iconfont icon-arrow-right"></i></a>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <h4>蒙迪欧</h4>
+        <p class="genre">紧凑型车</p>
+        <p class="price">10.5-16.5<em>万</em></p>
+      </a>
+    </li>
+  </ul>
+  <!--end车系列表-->
+
+  <h2 class="w-anchor" id="list-series-small">list-series-small</h2>
+  <!--车系列表small-->
+  <ul class="list-series-small">
+    <li class="brandsale">
+      <a class="info" href="#">
+        <img src="assets/images/picture/180x135.png">
+        <h4>雅阁</h4>
+        <p class="price">13.30-26.20<em>万</em></p>
+      </a>
+      <a class="skip" href="#">品牌<br>活动<i class="iconfont icon-arrow-right"></i></a>
+    </li>
+    <li class="tuansale">
+      <a class="info" href="#">
+        <img src="assets/images/picture/180x135.png">
+        <h4>雅阁</h4>
+        <p class="price">13.30-26.20<em>万</em></p>
+      </a>
+      <a class="skip" href="#">参加<br>团购<i class="iconfont icon-arrow-right"></i></a>
+    </li>
+    <li>
+      <a class="info" href="#">
+        <img src="assets/images/picture/180x135.png">
+        <h4>雅阁</h4>
+        <p class="price">13.30-26.20<em>万</em></p>
+      </a>
+    </li>
+  </ul>
+  <!--end车系列表small-->
+
+  <h2 class="w-anchor" id="list-series-tiny">list-series-tiny</h2>
+  <!--车系列表tiny-->
+  <ul class="list-series-tiny">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <strong>卡罗拉</strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <strong>卡罗拉</strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/180x135.png" />
+        <strong>卡罗拉</strong>
+      </a>
+    </li>
+  </ul>
+  <!--end车系列表tiny-->
+
+  <h2 class="w-anchor" id="list-cartype">list-cartype</h2>
+  <!--车型列表-->
+  <ul class="list-cartype">
+    <li>
+      <a class="caption" href="#">2014款 1.6G-L CVT领先版</a>
+      <p class="price">
+        全国最低价：<strong>22.78<em>万</em></strong><br/>
+        厂商指导价：<s>22.78<em>万</em></s>
+        <a class="btn primary small" href="#">询底价</a>
+      </p>
+      <p class="sale">
+        <strong>限时特价</strong>点击进入车商城特价活动
+        <a class="btn highlight small" href="#">特价购买</a>
+      </p>
+      <span class="add">+&nbsp;对比</span>
+    </li>
+    <li>
+      <a class="caption" href="#">2014款 1.6G-L CVT领先版</a>
+      <p class="price">
+        全国最低价：<strong>22.78<em>万</em></strong><br/>
+        厂商指导价：<s>22.78<em>万</em></s>
+        <a class="btn primary small" href="#">询底价</a>
+      </p>
+      <span class="add done">已加入</span>
+    </li>
+    <li class="null">
+      <a class="caption" href="#">2014款 1.6G-L CVT领先版</a>
+      <p class="price">
+        暂无报价
+        <a class="btn primary small disabled" href="#">询底价</a>
+      </p>
+      <span class="add disabled">+&nbsp;对比</span>
+    </li>
+  </ul>
+  <!--end车型列表-->
+
+  <h2 class="w-anchor" id="list-2sc">list-2sc</h2>
+  <!--二手车列表-->
+  <ul class="list-2sc">
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <h4>第四代发现 2011款 豪华型5.0 V8 HSE</h4>
+        <span class="mileage">3.4万公里</span>
+        <strong class="price">48<em>万</em></strong>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="assets/images/picture/280x210.png" />
+        <h4>第四代发现 2011款 豪华型5.0 V8 HSE</h4>
+        <span class="mileage">3.4万公里</span>
+        <strong class="price">48<em>万</em></strong>
+      </a>
+    </li>
+  </ul>
+  <!--end二手车列表-->
+
+  <h2 class="w-anchor" id="page">page</h2>
+  <!--分页-->
+  <section class="page">
+    <a class="home disabled" href="#">首&nbsp;页</a>
+    <a class="prev disabled" href="#">上一页</a>
+    <span class="num"><input type="tel" value="1/10"></span>
+    <a class="next" href="#">下一页</a>
+    <a class="last" href="#">末&nbsp;页</a>
+    <span class="skip">跳&nbsp;转</span>
+    <span class="stop">取&nbsp;消</span>
+  </section>
+  <br/>
+  <section class="page focus">
+    <a class="home disabled" href="#">首&nbsp;页</a>
+    <a class="prev disabled" href="#">上一页</a>
+    <span class="num"><input type="tel" value="1/10"></span>
+    <a class="next" href="#">下一页</a>
+    <a class="last" href="#">末&nbsp;页</a>
+    <span class="skip">跳&nbsp;转</span>
+    <span class="stop">取&nbsp;消</span>
+  </section>
+  <br/>
+  <section class="page-bbs">
+    <a class="home disabled" href="#">首&nbsp;页</a>
+    <a class="prev disabled" href="#">上一页</a>
+    <span class="num"><input type="tel" value="1/10"></span>
+    <a class="next" href="#">下一页</a>
+    <span class="skip">跳&nbsp;转</span>
+    <span class="stop">取&nbsp;消</span>
+  </section>
+  <br/>
+  <section class="page-bbs focus">
+    <a class="home disabled" href="#">首&nbsp;页</a>
+    <a class="prev disabled" href="#">上一页</a>
+    <span class="num"><input type="tel" value="1/10"></span>
+    <a class="next" href="#">下一页</a>
+    <span class="skip">跳&nbsp;转</span>
+    <span class="stop">取&nbsp;消</span>
+  </section>
+  <br/>
+  <section class="page-article">
+    <a class="prev disabled" href="#">上一页</a>
+    <span class="num"><input type="tel" value="1/10"></span>
+    <a class="plus" href="#">余下全文</a>
+    <a class="next" href="#">下一页</a>
+    <span class="skip">跳&nbsp;转</span>
+    <span class="stop">取&nbsp;消</span>
+  </section>
+  <br/>
+  <section class="page-article focus">
+    <a class="prev disabled" href="#">上一页</a>
+    <span class="num"><input type="tel" value="1/10"></span>
+    <a class="plus" href="#">余下全文</a>
+    <a class="next" href="#">下一页</a>
+    <span class="skip">跳&nbsp;转</span>
+    <span class="stop">取&nbsp;消</span>
+  </section>
+  <!--end分页-->
+
+  <h2 class="w-anchor" id="page-images">page-images</h2>
+  <!--图片分页-->
+  <section class="page-images">
+    <a class="prev disabled" href="#"><i class="iconfont icon-arrow-left"></i></a>
+    <a class="next" href="#"><i class="iconfont icon-arrow-right"></i></a>
+    <span class="num">1/10</span>
+  </section>
+  <!--end图片分页-->
+
+  <h2 class="w-anchor" id="input-textfield">input-textfield</h2>
+  <!--文本框-->
+  <div class="input-textfield">
+    <input data-valid="empty" type="text" placeholder="参考额度：5000">
+    <i class="iconfont icon-cross fn-hide"></i>
+  </div>
+  <!--end文本框-->
+
+  <h2 class="w-anchor" id="input-textarea">input-textarea</h2>
+  <!--文本框-->
+  <textarea class="input-textarea" placeholder="请输入"></textarea>
+  <!--end文本框-->
+
+  <h2 class="w-anchor" id="radio">radio</h2>
+  <!--单选框-->
+  <span class="radio"><input id="radio01" type="radio" /><label for="radio01">男</label></span>
+  <!--end单选框-->
+
+  <h2 class="w-anchor" id="checkbox">checkbox</h2>
+  <!--复选框-->
+  <span class="checkbox"><input id="checkbox01" type="checkbox" /><label for="checkbox01">中大型SUV</label></span>
+  <!--end复选框-->
+
+  <h2 class="w-anchor" id="comment-publish">comment-publish</h2>
+  <!--评论发布-->
+  <div class="comment-publish disabled">
+    <div class="user">one93,你好！<i class="split"></i><a href="#">退出</a></div>
+    <div class="input-comment">
+      <textarea placeholder="请输入内容"></textarea>
+      <input type="submit" value="发表评论">
+    </div>
+    <div class="login">请先<a href="#">登录</a>，再发评论</div>
+  </div>
+  <br />
+  <div class="comment-publish">
+    <div class="user">one93,你好！<i class="split"></i><a href="#">退出</a></div>
+    <div class="input-comment">
+      <textarea placeholder="请输入内容"></textarea>
+      <input type="submit" value="发表评论">
+    </div>
+    <div class="login">请先<a href="#">登录</a>，再发评论</div>
+  </div>
+  <br />
+  <div class="comment-publish disabled small">
+    <div class="input-comment small">
+      <input type="text" placeholder="请输入内容">
+      <input type="submit" value="发表回复">
+    </div>
+    <div class="login">请先<a href="#">登录</a>，再发评论</div>
+  </div>
+  <br />
+  <div class="comment-publish small">
+    <div class="input-comment small">
+      <input type="text" placeholder="请输入内容">
+      <input type="submit" value="发表回复">
+    </div>
+    <div class="login">请先<a href="#">登录</a>，再发评论</div>
+  </div>
+  <!--end评论发布-->
+
+  <h2 class="w-anchor" id="flowergrade">flowergrade</h2>
+  <!--花评级-->
+  <span class="flowergrade"><i class="iconfont icon-flower icon-positive"></i>好评</span>
+  <span class="flowergrade"><i class="iconfont icon-flower icon-moderate"></i>中评</span>
+  <span class="flowergrade"><i class="iconfont icon-flower icon-negative"></i>差评</span>
+  <br/><br/>
+  <span class="flowergrade option"><input id="positive" type="radio" name="flowergrade"  /><label for="positive"><i class="iconfont icon-flower icon-positive"></i>好评<i class="iconfont icon-ok"></i></label></span>
+  <span class="flowergrade option"><input id="moderate" type="radio" name="flowergrade" /><label for="moderate"><i class="iconfont icon-flower icon-moderate"></i>中评<i class="iconfont icon-ok"></i></label></span>
+  <span class="flowergrade option"><input id="negative" type="radio" name="flowergrade" /><label for="negative"><i class="iconfont icon-flower icon-negative"></i>差评<i class="iconfont icon-ok"></i></label></span>
+  <!--end花评级-->
+
+  <h2 class="w-anchor" id="stargrade">stargrade</h2>
+  <!--星评级-->
+  <span class="stargrade">
+    <span class="dark"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+    <span style="width:90%;" class="light"><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i><i class="iconfont icon-star-fill"></i></span>
+  </span>
+  <!--end星评级-->
+
+  <h2 class="w-anchor" id="praisepoint">praisepoint</h2>
+  <!--赞-->
+  <span class="praisepoint"><input id="praisepoint01" type="checkbox"><label for="praisepoint01"><i class="iconfont icon-praise"></i><strong>162</strong></label></span>
+  <br/><br/>
+  <span class="praisepoint round"><input id="praisepoint02" type="checkbox"><label for="praisepoint02"><i class="iconfont icon-praise"></i><strong>162</strong></label></span>（可取消）
+  <!--end赞-->
+
+  <h2 class="w-anchor" id="notice">notice</h2>
+  <!--公告-->
+  <div class="notice">
+    <span>近期不法人员以赠送礼品支付运费为由骗取钱财，请拒绝以免受损！</span>
+    <i class="iconfont icon-cross"></i>
+  </div>
+  <!--end公告-->
+
+  <h2 class="w-anchor" id="tips">tips</h2>
+  <!--提示-->
+  <div class="tips info">
+    <i class="iconfont icon-info"></i>
+    提示文字。
+  </div>
+  <br/>
+  <div class="tips warn">
+    <i class="iconfont icon-exclamation"></i>
+    提示文字。
+  </div>
+  <br/>
+  <div class="tips query">
+    <i class="iconfont icon-query"></i>
+    提示文字。
+  </div>
+  <br/>
+  <div class="tips error">
+    <i class="iconfont icon-cross"></i>
+    提示文字。
+  </div>
+  <br/>
+  <div class="tips succeed">
+    <i class="iconfont icon-ok"></i>
+    提示文字。
+  </div>
+  <!--end提示-->
+
+  <h2 class="w-anchor" id="alert">alert</h2>
+  <!--弹层-->
+  <div class="alert" style="position: static; margin: 0;">
+    <div class="info">
+      <i class="iconfont icon-info"></i>提示文字。
+    </div>
+  </div>
+  <br/>
+  <div class="alert" style="position: static; margin: 0;">
+    <div class="info">
+      <i class="iconfont icon-exclamation"></i>提示文字。
+    </div>
+  </div>
+  <br/>
+  <div class="alert" style="position: static; margin: 0;">
+    <div class="info">
+      <i class="iconfont icon-query"></i>提示文字。
+    </div>
+  </div>
+  <br/>
+  <div class="alert" style="position: static; margin: 0;">
+    <div class="info">
+      <i class="iconfont icon-cross"></i>提示文字。
+    </div>
+  </div>
+  <br/>
+  <div class="alert" style="position: static; margin: 0;">
+    <div class="info">
+      <i class="iconfont icon-ok"></i>提示文字。
+    </div>
+  </div>
+  <br/>
+  <div class="alert" style="position: static; margin: 0;">
+    <div class="info pure">提示文字。</div>
+    <div class="handle"><span class="btn primary small">我知道了</span></div>
+  </div>
+  <!--end弹层-->
+
+  <h2 class="w-anchor" id="bubble">bubble</h2>
+  <!--气泡-->
+  <div class="bubble">
+    <div class="info">点击图片可以查看大图呦，亲！</div>
+    <div class="handle"><span class="btn primary small">我知道了</span></div>
+  </div>
+  <!--end气泡-->
+
+  <h2 class="w-anchor" id="search">search</h2>
+  <!--搜索-->
+  <style>.search header .icon-cross{padding:8px;}.search .s-tab label{margin-right:15px;}</style>
+  <section class="search" style="position: static;">
+    <header>
+      <h1 class="s-tab">
+        <input id="s-tab01" name="s-tab" type="radio" checked />
+        <label for="s-tab01">综合</label>
+        <input id="s-tab02" name="s-tab" type="radio" />
+        <label for="s-tab02">文章</label>
+        <input id="s-tab03" name="s-tab" type="radio" />
+        <label for="s-tab03">论坛</label>
+        <input id="s-tab04" name="s-tab" type="radio" />
+        <label for="s-tab04">视频</label>
+        <input id="s-tab05" name="s-tab" type="radio" />
+        <label for="s-tab05">找车</label>
+      </h1>
+      <i class="iconfont icon-cross"></i>
+    </header>
+    <section class="s-index">
+      <div class="s-form">
+        <input type="text" required placeholder="请输入" />
+        <i class="iconfont icon-cross"></i>
+        <button class="iconfont icon-search"></button>
+      </div>
+    </section>
+    <section class="s-result">
+      <dl class="s-through">
+        <dt>
+          <i class="iconfont icon-car"></i>直达车系
+          <span>点击<i class="iconfont icon-add"></i>添加到输入框</span>
+        </dt>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+      </dl>
+      <dl class="s-mixed">
+        <dt>
+          <i class="iconfont icon-search"></i>综合搜索
+          <span>点击<i class="iconfont icon-add"></i>添加到输入框</span>
+        </dt>
+        <dd>
+          <a href="#"><mark>宝马</mark>X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#"><mark>宝马</mark>X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+      </dl>
+      <dl class="s-history">
+        <dt>
+          <i class="iconfont icon-time"></i>搜索历史
+          <span>点击<i class="iconfont icon-add"></i>添加到输入框</span>
+        </dt>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+      </dl>
+      <div class="s-clear"><span class="btn">清除搜索历史</span></div>
+    </section>
+  </section>
+  <br/>
+  <section class="search-trigger" data-role="searchTrigger">
+    请输入<i class="iconfont icon-search"></i>
+  </section>
+  <br/>
+  <section class="search search-inlay">
+    <section class="s-index">
+      <div class="s-form">
+        <input type="text" required="" placeholder="请输入">
+        <i class="iconfont icon-cross"></i>
+        <button class="iconfont icon-search"></button>
+      </div>
+    </section>
+    <section class="s-result ">
+      <dl class="s-through">
+        <dt>
+          <i class="iconfont icon-car"></i>直达车系
+          <span>点击<i class="iconfont icon-add"></i>添加到输入框</span>
+        </dt>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+      </dl>
+      <dl class="s-mixed">
+        <dt>
+          <i class="iconfont icon-search"></i>综合搜索
+          <span>点击<i class="iconfont icon-add"></i>添加到输入框</span>
+        </dt>
+        <dd>
+          <a href="#"><mark>宝马</mark>X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#"><mark>宝马</mark>X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+      </dl>
+      <dl class="s-history">
+        <dt>
+          <i class="iconfont icon-time"></i>搜索历史
+          <span>点击<i class="iconfont icon-add"></i>添加到输入框</span>
+        </dt>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+        <dd>
+          <a href="#">宝马X6</a>
+          <i class="iconfont icon-add"></i>
+        </dd>
+      </dl>
+      <div class="s-clear">
+        <span class="clear">清除历史纪录</span>
+        <span class="close">关闭</span>
+      </div>
+    </section>
+  </section>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <!--end搜索-->
+
+  <h2 class="w-anchor" id="application">application</h2>
+  <!--应用-->
+  <section class="application">
+    <a href="#"><img src="assets/images/picture/app.png" /></a>
+    <a href="#"><img src="assets/images/picture/app.png" /></a>
+    <a href="#"><img src="assets/images/picture/app.png" /></a>
+    <a href="#"><img src="assets/images/picture/app.png" /></a>
+    <a href="#"><img src="assets/images/picture/app.png" /></a>
+  </section>
+  <!--end应用-->
+
+  <h2 class="w-anchor" id="footer">footer</h2>
+  <!--底部-->
+  <footer class="footer">
+    <a class="switch" href="#"><i class="iconfont icon-computer"></i>访问电脑版</a>
+    <a class="suggest" href="#"><i class="iconfont icon-edit"></i>给我们提建议</a>
+    <p>&copy;&nbsp;2014&nbsp;汽车之家&nbsp;m.autohome.com.cn</p>
+  </footer>
+  <!--end底部-->
+
+  <h2 class="w-anchor" id="advertise">advertise</h2>
+  <!--广告-->
+  <div class="adv01"><a href="#">【推广】欧朋上网省流量达94%</a></div>
+  <br />
+  <div class="adv02">
+    <div><a href="#">试屏版发帖，发评论功能上线上上</a></div>
+    <em>推广</em>
+  </div>
+  <br />
+  <div class="adv03">
+    <a href="#">
+      <img src="assets/images/picture/240x120.jpg" />
+      <span class="noa">预约试驾有礼送趣动体验体验体验</span>
+      <span class="nob">一汽-大众宝来<em>推广</em></span>
+    </a>
+  </div>
+  <br />
+  <div class="adv03-1">
+    <a href="#">
+      <img src="assets/images/picture/120x120.png" />
+      <span class="noa">先推1.5T 华泰新圣达菲10月上市</span>
+      <span class="nob">日前 我们从相关渠道了解到 华泰新圣达菲将于今年10月正式上市<em>推广</em></span>
+    </a>
+  </div>
+  <br />
+  <div class="adv05">
+    <a href="#"><img src="assets/images/picture/640x80.png" /></a>
+  </div>
+  <!--end广告-->
+
+  <h2 class="w-anchor" id="backtop">backtop</h2>
+  <!--返顶-->
+  <i class="iconfont icon-backtop" data-role="backTop"></i>
+  <!--end返顶-->
+  
+  
+  <!--start表单列表-->
+  <h2 class="w-anchor" id="list-form">list-form</h2>
+  
+  <!-- start 列表一 -->
+    <dl class="list-form">
+      <dt>
+        购车人：
+      </dt>
+      <dd>
+        <input type="text" class="inp-text cue-error" value="这里是错误提示" placeholder="请输入姓名">
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        电话号码：
+      </dt>
+      <dd>
+        <input type="text" class="inp-text cue-error" placeholder="请输入电话码号">
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        意向车系：
+      </dt>
+      <dd>
+        <a href="#" type="text" class="sel-car cue-error">选择车系<i class="iconfont icon-forward"></i></a>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        意向车系：
+      </dt>
+      <dd>
+        <select class="select-two cue-error">
+          <option>请选择车型</option>
+          <option>请选择车型</option>
+        </select><select class="select-two cue-error">
+          <option>请选择车系</option>
+          <option>请选择车系</option>
+        </select>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        意向车型：
+      </dt>
+      <dd>
+        <select class="select-one cue-error">
+          <option>请选择车型</option>
+          <option>请选择车型</option>
+        </select>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        验证码：
+      </dt>
+      <dd class="yzm-cont">
+        <input type="text" class="inp-text cue-error" placeholder="验证码">
+        <a href="#" class="btn btn-disabled">60秒后重新获取</a>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        验证码：
+      </dt>
+      <dd class="yzm-cont">
+        <input type="text" class="inp-text cue-error" placeholder="验证码">
+        <span class="yzm-pic"><img src="../mass/assets/images/picture/yzm.jpg"></span>
+        <a href="#" class="yzm-refresh">刷新</a>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+    </dl>
+    <!-- end 列表一 -->
+    <br>
+    <br>
+    <!-- start 列表二 -->
+    <dl class="list-form list-form-two">
+      <dt>
+        购车人：
+      </dt>
+      <dd>
+        <input type="text" class="inp-text cue-error" value="这里是错误提示" placeholder="请输入姓名">
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        电话号码：
+      </dt>
+      <dd>
+        <input type="text" class="inp-text" placeholder="请输入电话码号">
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        意向车系：
+      </dt>
+      <dd>
+        <a href="#" type="text" class="sel-car">选择车系<i class="iconfont icon-forward"></i></a>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        意向车系：
+      </dt>
+      <dd>
+        <select class="select-two">
+          <option>请选择车型</option>
+          <option>请选择车型</option>
+        </select><select class="select-two">
+          <option>请选择车系</option>
+          <option>请选择车系</option>
+        </select>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dt>
+        验证码：
+      </dt>
+      <dd class="yzm-cont">
+        <input type="text" class="inp-text" placeholder="验证码">
+        <a href="#" class="btn btn-disabled">60秒后重新获取</a>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+      <dd class="yzm-cont">
+        <input type="text" class="inp-text" placeholder="验证码">
+        <span class="yzm-pic"><img src="../mass/assets/images/picture/yzm.jpg"></span>
+        <a href="#" class="yzm-refresh">刷新</a>
+        <span class="txt-error">这是错误提示</span>
+      </dd>
+    </dl>
+    <!-- start 列表二 -->
+    
+    <br>
+    <br>
+    
+    <!-- start 列表三 -->
+    <dl class="list-form list-form-three">
+      <dd>
+        <input type="text" class="inp-text cue-error" value="错误提示" placeholder="请输入姓名">
+      </dd>
+      <dd>
+        <input type="text" class="inp-text cue-error" placeholder="请输入电话码号">
+      </dd>
+      <dd>
+        <a href="#" type="text" class="sel-car cue-error">选择车系<i class="iconfont icon-forward"></i></a>
+      </dd>
+      <dd>
+        <select class="select-two cue-error">
+          <option>请选择车型</option>
+          <option>请选择车型</option>
+        </select><select class="select-two cue-error">
+          <option>请选择车系</option>
+          <option>请选择车系</option>
+        </select>
+      </dd>
+      <dd class="yzm-cont">
+        <input type="text" class="inp-text" placeholder="验证码">
+        <a href="#" class="btn btn-disabled">60秒后重新获取</a>
+      </dd>
+      <dd class="yzm-cont">
+        <input type="text" class="inp-text" placeholder="验证码">
+        <span class="yzm-pic"><img src="../mass/assets/images/picture/yzm.jpg"></span>
+        <a href="#" class="yzm-refresh">刷新</a>
+      </dd>
+    </dl>
+    <!-- end 列表三 -->
+    
+    <br>
+    <br>
+    <!-- start 列表四 -->
+    <ul class="list-form-ul">
+      <li>
+        <span class="name">车辆信息：</span>
+        <span class="span-text">2014款款款款款款款款款款款款款款款</span>
+        <i class="iconfont icon-arrow-right"></i>
+      </li>
+      <li>
+        <span class="name">城市：</span>
+        <span class="span-text">北京</span>
+        <i class="iconfont icon-arrow-right"></i>
+      </li>
+      <li>
+        <span class="name">手机：</span>
+        <input type="text" class="inp-text cue-error" placeholder="请输入姓名">
+        <i class="iconfont icon-pen"></i>
+      </li>
+      <li>
+        <span class="name">姓名：</span>
+        <input type="text" class="inp-text cue-error" placeholder="请输入手机号">
+        <i class="iconfont icon-pen"></i>
+      </li>
+      <li class="yzm-cont">
+        <span class="name">验证码：</span>
+        <input type="text" class="inp-text" placeholder="验证码">
+        <a href="#" class="btn">60秒后重新获取</a>
+      </li>
+      <li class="yzm-cont">
+        <span class="name">验证码：</span>
+        <input type="text" class="inp-text" placeholder="验证码">
+        <span class="yzm-pic"><img src="../mass/assets/images/picture/yzm.jpg"></span>
+        <a href="#" class="yzm-refresh">刷新</a>
+      </li>
+    </ul>
+    <!-- end 列表四 -->
+    
+    <br>
+    <br>
+  
+  <!--end表单列表-->
+  
+  
+ 
+  <script src="http://s.autoimg.cn/mass/zepto-1.2.min.js"></script>
+  <script src="http://s.autoimg.cn/mass/mass-1.12.3.min.js"></script>
+</html>

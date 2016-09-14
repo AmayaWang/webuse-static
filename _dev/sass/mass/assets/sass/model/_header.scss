@@ -1,0 +1,64 @@
+@charset "UTF-8";
+//头部控件
+$header-base:          $white;
+$header-login-text:    $white;
+$header-login-base:    $blue-light;
+$header-message-text:  $white;
+$header-message-base:  $red-light;
+$header-download-text: $gray-text;
+.header {
+  height: ptr(32px);
+  padding: ptr(6px) 0;
+  line-height: 1;
+  background-color: $header-base;
+  overflow: hidden;
+  .athm { 
+    float: left; 
+    width: ptr(100px); 
+    height: ptr(23px); 
+    margin: ptr(5px) 0 0 ptr(12px);
+    text-indent: -999rem; 
+    background-position: 0 0; 
+    overflow: hidden;
+  }
+  .login {
+    float: right;
+    margin: ptr(2px) ptr(12px) 0 0;
+    padding: ptr(6px) ptr(4px);
+    font-size: $fontsize-default;
+    color: $header-login-text;
+    background-color: $header-login-base;
+    border-radius: $radius;
+    &:visited{ color: $header-login-text - #000001;}
+  }
+  .user {
+    position: relative;
+    float: right;
+    margin-right: ptr(16px);
+    img {
+      @extend %img32x32;
+      border-radius: $radius;
+    }
+    i {
+      position: absolute;
+      top: ptr(-2px);
+      right: ptr(-10px);
+      width: ptr(18px);
+      padding: ptr(3px) 0;
+      font-size: $fontsize-tiny;
+      color: $header-message-text;
+      text-align: center;
+      background-color: $header-message-base;
+      border-radius: 50%;
+      &:visited{ color: $header-message-text - #000001;}
+    }
+  }
+  .download {
+    float: right;
+    margin: 0 ptr(28px) 0 0;
+    padding: ptr(8px) 0;
+    font-size: fontsize-default;
+    color: $header-download-text;
+    &:visited{ color: $header-download-text - #000001;}
+  }
+}

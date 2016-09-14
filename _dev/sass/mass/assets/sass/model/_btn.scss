@@ -1,0 +1,131 @@
+@charset "UTF-8";
+//按钮控件
+$btn-text:                     $gray-text;
+$btn-base:                     $gray-base-light;
+$btn-border:                   $gray-border;
+$btn-text-primary:             $white;
+$btn-base-primary:             $blue-light;
+$btn-border-primary:           $blue-light;
+$btn-text-highlight:           $white;
+$btn-base-highlight:           $orange;
+$btn-border-highlight:         $orange;
+$btn-text-disabled:            $gray-text-lighter;
+$btn-base-disabled:            $gray-base-light;
+$btn-border-disabled:          $gray-border;
+$btn-icon-disabled:            $gray-text-lighter;
+$btn-border-activate:          $blue-light;
+$btn-text-dropdown-prefix:     $gray-text-light;
+$btn-text-loading:             $gray-text-light;
+$btn-text-telphone:            $white;
+$btn-base-telphone:            $green;
+$btn-border-telphone:          $green;
+.btn {
+  @extend %appearance;
+  @extend %box-sizing-border;
+  display: inline-block;
+  height: ptr(36px);
+  font-size: $fontsize-default;
+  color: $btn-text;
+  line-height: ptr(20px);
+  padding: ptr(7px) ptr(15px);
+  background-color: $btn-base;
+  border: solid $btn-border 1px;
+  border-radius: $radius;
+  &:visited { color: $btn-text - #000001;}
+  .icon-arrow-top,
+  .icon-arrow-right,
+  .icon-arrow-bottom,
+  .icon-arrow-left{ 
+    display: inline-block;
+    height: ptr(12px);
+    margin: ptr(4px) 0 0 ptr(5px);
+    font-size: ptr(12px);
+    color: #666;
+    line-height: 1;
+    vertical-align: top;
+  }
+  .icon-arrow-left {
+    margin-left: 0;
+    margin-right: ptr(5px);
+  }
+  .icon-arrow-top,
+  .icon-arrow-bottom { margin-left: ptr(7px);}
+  &.small {
+    height: ptr(28px);
+    font-size: $fontsize-small;
+    padding: ptr(3px) ptr(7px);
+  }
+  &.full {
+    display: block;
+    text-align: center;
+    &[type="submit"],
+    &[type="button"] { width: 100%;}
+  }
+  &.primary {
+    color: $btn-text-primary;
+    background-color: $btn-base-primary;
+    border-color: $btn-border-primary;
+    &:visited { color: $btn-text-primary - #000001;}
+    .icon-mobile { margin-right: ptr(5px);}
+  }
+  &.highlight {
+    color: $btn-text-highlight;
+    background-color: $btn-base-highlight;
+    border-color: $btn-border-highlight;
+    &:visited { color: $btn-text-highlight - #000001;}
+  }
+  &.telphone {
+    color: $btn-text-telphone;
+    background-color: $btn-base-telphone;
+    border-color: $btn-border-telphone;
+    &:visited { color: $btn-text-telphone - #000001;}
+    .icon-telphone,
+    .icon-telphone-24h { margin-right: ptr(6px);}
+  }
+  &.disabled {
+    color: $btn-text-disabled;
+    background-color: $btn-base-disabled;
+    border-color: $btn-border-disabled;
+    pointer-events: none;
+    &:visited { color: $btn-text-disabled - #000001;}
+	.iconfont { color: $btn-icon-disabled;}
+  }
+  &.loading {
+    font-size: $fontsize-tiny;
+    color: $btn-text-loading;
+    .load {
+      margin: ptr(4px) ptr(8px) 0 0;
+      vertical-align: top;
+    }
+  }
+  &.dropdown {
+    position: relative;
+    padding-left: ptr(8px);
+    padding-right: ptr(26px);
+    text-align: left;
+    @extend %ellipsis-basic;
+    abbr {
+      display: inline-block;
+      width: 100%;
+      @extend %ellipsis-basic;
+    }
+    .prefix { color: $btn-text-dropdown-prefix;}
+    .icon-arrow-right,
+    .icon-arrow-bottom {
+      position: absolute;
+      top: 50%;
+      right: ptr(7px);
+      margin: ptr(-6px) 0 0 0;
+    }
+    &.activate { border-color: $btn-border-activate;}
+  }
+  &.select {
+    padding-left: ptr(4px);
+    padding-right: ptr(22px);
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAMCAYAAAAgT+5sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZENzRFNDRBQTExMzExRTRBMDdBRjNDRTZEQkY4REEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZENzRFNDRCQTExMzExRTRBMDdBRjNDRTZEQkY4REEwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkQ3NEU0NDhBMTEzMTFFNEEwN0FGM0NFNkRCRjhEQTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkQ3NEU0NDlBMTEzMTFFNEEwN0FGM0NFNkRCRjhEQTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5yHFP6AAABJUlEQVR42sSWyQrCMBCGU0+CPpTou6RHL14URbEudenFW30X6yu5objWPzqBEGwLJtaBj5RMx+azkxIWxzEzgXPugHXetToFZhCu6zoYHqCC6xXNZdWoY0S1d2YYBcN6DjZ0XRUyYRgmyoh5Jb8WEpTaYo7/U2QJOmCXJZMmAdr0W1+HI/rLQnvVgQfKNB1h0TV18QkSeyGB3MK0tYxFFJkG6IJSkowmcQA95AJmIUw3+2vEYsS/MQdDcNLbjEKVOIKBlMj6QOTVWkwult5Mi3q+SLfIBzg0ClEPNWO9/p+bXW0b+WZGwAcXRUBKnMHYtoQVkQSZPpiCm3LbFUyQ92xLWNvsKW3m00dAPGSGXPMXEu8GtnA80I4d+hEkALNPeZs8BRgAje62q1bO1fAAAAAASUVORK5CYII=");
+    background-size: ptr(26px) auto;
+    background-repeat: no-repeat;
+    background-position: right center;
+    &.full{ width: 100%;}
+  }
+}

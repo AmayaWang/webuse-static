@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import "model/base/reset.scss";
+@import "model/base/setting.scss";
+@import "model/base/css3.scss";
+@import "model/base/mixin.scss";
+@import "model/base/media-queries.scss";
+@import "model/btn.scss";
+@import "model/header.scss";
+@import "model/nav.scss";
+@import "model/nav-channel.scss";
+@import "model/nav-bread.scss";
+@import "model/nav-final.scss";
+@import "model/menu.scss";
+@import "model/tab.scss";
+@import "model/tab-secondary.scss";
+@import "model/tab-btngroup.scss";
+@import "model/lettergroup.scss";
+@import "model/filter.scss";
+@import "model/blankloading.scss";
+@import "model/overallloading.scss";
+@import "model/carousel-images.scss";
+@import "model/list-info.scss";
+@import "model/list-info-brief.scss";
+@import "model/list-video.scss";
+@import "model/list-bbs.scss";
+@import "model/list-bbs-brief.scss";
+@import "model/list-thumb.scss";
+@import "model/list-thumb-sort.scss";
+@import "model/list-mall.scss";
+@import "model/list-dealer.scss";
+@import "model/list-pricedown.scss";
+@import "model/list-pricedown-brief.scss";
+@import "model/list-series.scss";
+@import "model/list-series-small.scss";
+@import "model/list-series-tiny.scss";
+@import "model/list-cartype.scss";
+@import "model/list-2sc.scss";
+@import "model/page.scss";
+@import "model/page-images.scss";
+@import "model/input-textfield.scss";
+@import "model/input-textarea.scss";
+@import "model/radio.scss";
+@import "model/checkbox.scss";
+@import "model/comment-publish.scss";
+@import "model/flowergrade.scss";
+@import "model/stargrade.scss";
+@import "model/praisepoint.scss";
+@import "model/notice.scss";
+@import "model/tips.scss";
+@import "model/alert.scss";
+@import "model/bubble.scss";
+@import "model/search.scss";
+@import "model/application.scss";
+@import "model/footer.scss";
+@import "model/advertise.scss";
+@import "model/backtop.scss";
+@import "model/list-form.scss";
+
+body{
+  padding: 0 8px;
+  @include min-screen(750px) {
+    max-width: 640px;
+    padding: 0 100px 0 300px;
+  }
+}
+.w-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  @extend %box-sizing-border;
+  width: 100%;
+  padding: 15px 0 15px 46px;
+  font-size: 24px;
+  font-weight: 300;
+  color: $white;
+  @include gradient-vertical(#555, #333);
+  @include box-shadow(0 2px 4px #444);
+  .shoot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46px;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 8px;
+      @extend %box-sizing-border;
+      width: 30px;
+      height: 40%;
+      border: solid $white;
+      border-width: 2px 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      width: 30px;
+      height: 0;
+      margin-top: -1px;
+      border-bottom: solid $white 2px;
+    }
+  }
+  @include min-screen(750px) { display: none;}
+}
+.w-guide,
+.w-iconfont {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  padding: 21px 8px;
+  font-size: 12px;
+  font-weight: 300;
+  color: $white;
+  @include min-screen(750px) {
+    top: 18px;
+    padding: 12px;
+    color: #666;
+    background-color: $gray-base-light;
+    border-radius: 20px 0 0 20px;
+    @include box-shadow(0 1px 1px #666);
+  }
+}
+.w-iconfont {
+  right: 64px;
+  @include min-screen(750px) {
+    top: 68px;
+    right: 0;
+  }
+}
+.w-shoot {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10010;
+  @extend %box-sizing-border;
+  width: 240px;
+  height: 100%;
+  font-weight: 300;
+  background-color: $gray-base-light;
+  border-right: solid $gray-border-lighter 1px;
+  overflow: auto;
+  @extend %scrolling-touch;
+  &:target { 
+    display: block;
+    + .w-shoot-mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10009;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
+  h1 { display: none;}
+  a {
+    display: block;
+    padding: 12px 0 12px 16px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: solid $gray-border-lighter 1px;
+    &:last-child { margin-bottom: 600px;}
+  }
+  @include min-screen(750px) { 
+    display: block;
+    h1 {
+      display: block;
+      font-size: 32px;
+      color: #666;
+      padding: 16px 0 16px 16px;
+      sup { font-size: 20px; vertical-align:super;}
+      small{
+        display: block;
+        margin-top: 8px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.w-anchor {
+  padding: 18px 0 12px;
+  font-size: 32px;
+  font-weight: 300;
+  color: #666;
+}

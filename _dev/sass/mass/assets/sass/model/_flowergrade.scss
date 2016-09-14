@@ -1,0 +1,81 @@
+@charset "UTF-8";
+//花评级控件
+$flowergrade-text:          $gray-text;
+$flowergrade-option-text:   $blue-light;
+$flowergrade-option-border: $red-light;
+.icon-positive,
+.icon-moderate,
+.icon-negative {
+  display: inline-block;
+  width: ptr(16px);
+  height: ptr(16px);
+  font-size: ptr(14px);
+  color: $white;
+  line-height: 1;
+  text-align: center;
+  background-color: #ff5000;
+  border-radius: 50%;
+  overflow: hidden;
+  &::before {
+    display: inline-block;
+    margin-top: ptr(2px);
+  }
+}
+.icon-moderate { background-color: #ffb400;}
+.icon-negative { background-color: #999999;}
+
+.flowergrade {
+  display: inline-block;
+  font-size: $fontsize-default;
+  color: $flowergrade-text;
+  line-height: 1;
+  .icon-flower { 
+    margin: ptr(-1px) ptr(4px) 0 0;
+    vertical-align: top;
+  }
+  &.option {
+    position: relative;
+    color: $flowergrade-option-text;
+    overflow: hidden;
+    input {
+      position: absolute;
+      top: 0;
+      left: ptr(-1000px);
+    }
+    label {
+      display: inline-block;
+      padding: ptr(8px) ptr(4px) ptr(8px);
+      border: solid transparent 2px;
+      border-radius: $radius;
+      .icon-ok {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        &::before {
+          position: absolute;
+          right: ptr(1px);
+          bottom: ptr(1px);
+          font-size: ptr(12px);
+          color: $white;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: ptr(-10px);
+          bottom: ptr(-10px);
+          z-index: -1;
+          width: ptr(24px);
+          height: ptr(24px);
+          background-color: $flowergrade-option-border;
+          @include rotate(45deg);
+        }
+      }
+    }
+    input:checked + label {
+      border-color: $flowergrade-option-border;
+      .icon-ok { display: inline-block;}
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+//轮播图控件
+$carousel-images-title-text: $white;
+$carousel-images-title-base: #444;
+.carousel-images { 
+  line-height: 1;
+  @extend %holdimg;
+  overflow: hidden;
+  .carousel { 
+    width: 1000%; 
+    overflow: hidden; 
+    will-change: transform;
+    .c-item { 
+      float: left; 
+      width: 10%; 
+      overflow: hidden;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h2 {
+    position: relative;
+    height: 1em;
+    padding: ptr(4px) ptr(32px) ptr(4px) ptr(8px);
+    font-size: $fontsize-tiny;
+    color: $carousel-images-title-text;
+    background-color: $carousel-images-title-base;
+    @extend %ellipsis-basic;
+    span {
+      position: absolute;
+      top: 50%;
+      right: ptr(8px);
+      margin-top: -0.5em;
+      font-size: $fontsize-tiny;
+      color: darken($carousel-images-title-text, 10%);
+    }
+  }
+}

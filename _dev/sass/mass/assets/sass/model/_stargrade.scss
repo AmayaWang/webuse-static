@@ -1,0 +1,31 @@
+@charset "UTF-8";
+//星评级控件
+$stargrade-dark-icon-star-fill:  #c3c3c3;
+$stargrade-light-icon-star-fill: $orange;
+.stargrade { 
+  position: relative; 
+  display: inline-block;
+  width: ptr(60px);
+  height: ptr(12px);
+  line-height: 1;
+  .dark,
+  .light { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: ptr(60px);
+    height: ptr(12px);
+    white-space: nowrap;
+    .icon-star-fill {
+      display: inline-block;
+      font-size: ptr(12px);
+      color: $stargrade-dark-icon-star-fill;
+      vertical-align: top;
+    }
+  }
+  .light {
+    z-index: 10;
+    overflow: hidden; 
+    .icon-star-fill { color: $stargrade-light-icon-star-fill;}
+  }
+}

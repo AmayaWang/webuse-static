@@ -1,0 +1,102 @@
+@charset "UTF-8";
+//降价列表控件
+$list-pricedown-base:               $white;
+$list-pricedown-border:             $gray-border-light;
+$list-pricedown-title-text:         $blue-light;
+$list-pricedown-price-text:         $orange;
+$list-pricedown-range-text:         $green;
+$list-pricedown-range-percent-text: $gray-text-light;
+$list-pricedown-trike-text:         $gray-text-lighter;
+$list-pricedown-shop-text:          $gray-text-light;
+$list-pricedown-shop-split-border:  $gray-border-lighter;
+$list-pricedown-mark-supply-text:   $white;
+$list-pricedown-mark-supply-base:   #c3c3c3;
+.list-pricedown {
+  li {
+    margin-top: ptr(8px);
+    padding: 0 ptr(8px);
+    line-height: 1;
+    background-color: $list-pricedown-base;
+    border: solid $list-pricedown-border 1px;
+    border-radius: $radius;
+  }
+  .info {
+    display: block;
+    margin-top: ptr(8px);
+    padding: 0 ptr(4px);
+    overflow: hidden;
+  }
+  h4 { 
+    font-size: $fontsize-default;
+    color: $list-pricedown-title-text;
+    line-height: 1.5;
+  }
+  .price {
+    margin-top: ptr(8px);
+    font-size: $fontsize-default;
+    overflow: hidden;
+    strong { 
+      float: left;
+      color: $list-pricedown-price-text;
+    }
+    .range {
+      float: left;
+      margin-left: ptr(16px);
+      color: $list-pricedown-range-text;
+      .icon-down {
+        margin-right: ptr(4px);
+      }
+    }
+    em { font-size: $fontsize-tiny;}
+    small { 
+      font-size: $fontsize-tiny;
+      color: $list-pricedown-range-percent-text;
+    }
+    s {
+      float: right; 
+      margin: ptr(4px) ptr(4px) 0 0;
+      font-size: $fontsize-tiny;
+      color: $list-pricedown-trike-text;
+    }
+  }
+  .shop {
+    display: block;
+    margin-top: ptr(12px);
+    padding-left: ptr(4px);
+    font-size: $fontsize-small;
+    color: $list-pricedown-shop-text;
+    overflow: hidden;
+    .split {
+      display: inline-block;
+      height: ptr(16px);
+      margin: 0 ptr(8px);
+      border-right: solid $list-pricedown-shop-split-border 1px;
+      vertical-align:middle;
+    }
+  }
+  .mark-supply { 
+    float: right;
+    margin: ptr(1px) 0 0 ptr(8px);
+    padding: ptr(1px) ptr(2px);
+    font-size: $fontsize-tiny;
+    color: $list-pricedown-mark-supply-text;
+    vertical-align: top;
+    background-color: $list-pricedown-mark-supply-base;
+    border-radius: $radius;
+  }
+  .handle {
+    margin: ptr(12px) 0;
+    overflow: hidden;
+    .telphone,.primary {
+      float: left;
+      width: 148px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+    .primary {
+      float: right;
+      width: 88px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+//单选框控件
+$radio-text:           $gray-text;
+$radio-text-checked:   $blue-light;
+$radio-input-base:     $gray-base-light;
+$radio-input-border:   $gray-border;
+$radio-input-dot-base: $blue-light;
+.radio { 
+  display: inline-block;
+  font-size: $fontsize-default;
+  color: $radio-text;
+  line-height: 1;
+  input {
+    @extend %appearance;
+    @extend %box-sizing-border;
+    position: relative;
+    width: ptr(18px);
+    height: ptr(18px);
+    margin-right: ptr(8px);
+    background-color: $radio-input-base;
+    border: solid $radio-input-border 2px;
+    border-radius: 50%;
+    vertical-align: top;
+    &:checked {
+      &::before {
+        content: "";
+        position: absolute;
+        top: ptr(3px);
+        left: ptr(3px);
+        width: ptr(8px);
+        height: ptr(8px);
+        background-color: $radio-input-dot-base; 
+        border-radius: 50%;
+      }
+      & + label { color: $radio-text-checked;}
+    }
+  }
+  label {
+    display: inline-block;
+    padding: ptr(1px) 0;
+  }
+  &.small {
+    font-size: $fontsize-small;
+    label { padding: ptr(2px) 0;}
+  }
+  &.full {
+    position: relative;
+    display: block;
+    padding-left: ptr(26px);
+    line-height: 1.5;
+    input {
+      position: absolute;
+      left: 0;
+      top: ptr(3px);
+    }
+    label { 
+      display: block;
+      padding: 0;
+    }
+  }
+}

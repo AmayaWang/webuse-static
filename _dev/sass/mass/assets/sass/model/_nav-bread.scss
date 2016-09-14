@@ -1,0 +1,189 @@
+@charset "UTF-8";
+//面包屑导航控件
+$nav-bread-text:         $white;
+$nav-bread-base:         $blue;
+$nav-bread-message-text: $white;
+$nav-bread-message-base: $red-light;
+$nav-bread-bottom-base:  $blue-light;
+.nav-bread {
+  position: relative;
+  z-index: 1;
+  height: ptr(40px);
+  padding: 0 ptr(50px) 0 ptr(42px);
+  line-height: 1;
+  background-color: $nav-bread-base;
+  overflow: hidden;
+  .icon-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: ptr(40px);
+    height: ptr(40px);
+    text-align: center;
+    &::before {
+      margin-top: ptr(11px);
+      vertical-align: top;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      height: ptr(40px);
+      border-left: solid darken($nav-bread-base, 10%) 1px;
+      border-right: solid lighten($nav-bread-base, 10%) 1px;
+    }
+  }
+  .icon-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: ptr(40px);
+    height: ptr(40px);
+    text-align: center;
+    &::before {
+      margin-top: ptr(12px);
+      vertical-align: top;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      height: ptr(40px);
+      border-left: solid darken($nav-bread-base, 10%) 1px;
+      border-right: solid lighten($nav-bread-base, 10%) 1px;
+    }
+  }
+  .mask-left,
+  .mask-right {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: ptr(42px);
+    z-index: 10;
+    width: ptr(16px);
+    height: ptr(38px);
+    @include gradient-horizontal($nav-bread-base, rgba($nav-bread-base,0));
+    pointer-events: none;
+  }
+  .mask-right {
+    right: ptr(54px);
+    left: auto;
+    @include gradient-horizontal(rgba($nav-bread-base,0), $nav-bread-base);
+  }
+  .bread {
+    margin: 0 ptr(8px);
+    height: ptr(60px);
+    font-size: $fontsize-default;
+    white-space: nowrap;
+    overflow: auto;
+    @extend %scrolling-touch;
+    a,
+    span{
+      display: inline-block;
+      padding: ptr(12px) 0;
+      color: $nav-bread-text;
+      &:visited { color: $nav-bread-text - #000001;}
+    }
+    .icon-forward {
+      margin: 0 ptr(6px) 0 ptr(4px);
+      font-size: ptr(12px);
+      color: darken($nav-bread-text, 20%);
+      vertical-align: ptr(2px);
+    }
+  }
+  .user {
+    position: absolute;
+    top: ptr(4px);
+    right: ptr(16px);
+    img {
+      @extend %img32x32;
+      border-radius: $radius;
+    }
+    i {
+      position: absolute;
+      top: ptr(-2px);
+      right: ptr(-10px);
+      width: ptr(18px);
+      padding: ptr(3px) 0;
+      font-size: $fontsize-tiny;
+      color: $nav-bread-message-text;
+      text-align: center;
+      background-color: $nav-bread-message-base;
+      border-radius: 50%;
+      &:visited{ color: $nav-bread-message-text - #000001;}
+    }
+  }
+  .icon-user {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: ptr(22px);
+    padding: ptr(9px) ptr(12px);
+  }
+  .icon-search { display: none;}
+  &.old {
+    padding-right: ptr(80px);
+    .icon-nav { display: none;}
+    .mask-right { right: ptr(80px);}
+    .login {
+      position: absolute;
+      top: 0;
+      right: ptr(12px);
+      width: ptr(32px);
+      padding: ptr(12px) 0;
+      font-size: $fontsize-default;
+      color: $white;//未定义
+      text-align: center;
+      white-space: nowrap;
+    }
+    .user {
+      position: absolute;
+      top: ptr(4px);
+      right: ptr(12px);
+      i {
+        position: absolute;
+        top: ptr(-6px);
+        right: ptr(-12px);
+      }
+    }
+    .icon-search {
+      position: absolute;
+      top: 0;
+      right: ptr(56px);
+      display: block;
+      padding: ptr(10px) 0;
+      font-size: $fontsize-big;
+      color: $white;//未定义
+    }
+  }
+  &.bottom {
+    padding-right: 0;
+    background-color: $nav-bread-bottom-base;
+    .icon-home,
+    .icon-menu {
+      &::after {
+        border-left-color: darken($nav-bread-bottom-base, 10%);
+        border-right-color: lighten($nav-bread-bottom-base, 10%);
+      }
+    }
+    .mask-left {
+      @include gradient-horizontal($nav-bread-bottom-base, rgba($nav-bread-bottom-base,0));
+    }
+    .mask-right {
+      right: 0;
+      @include gradient-horizontal(rgba($nav-bread-bottom-base,0), $nav-bread-bottom-base);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      border-top: solid darken($nav-bread-bottom-base, 10%) 1px;
+      border-bottom: solid lighten($nav-bread-bottom-base, 10%) 1px;
+    }
+  }
+}

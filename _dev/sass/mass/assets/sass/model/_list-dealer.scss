@@ -1,0 +1,253 @@
+@charset "UTF-8";
+//经销商列表控件
+$list-dealer-base:                 $white;
+$list-dealer-border:               $gray-border-light;
+$list-dealer-title-text:           $blue-light;
+$list-dealer-brand-text:           $gray-text-light;
+$list-dealer-supply-text:          $gray-text-lighter;
+$list-dealer-price-text:           $orange;
+$list-dealer-site-text:            $gray-text-light;
+$list-dealer-area-text:            $gray-text-light;
+$list-dealer-icon-anchor:          $gray-text-lighter;
+$list-dealer-dist-border:          #c3c3c3;
+$list-dealer-sale-text:            $gray-text;
+$list-dealer-sale-border:          $gray-border-lighter;
+$list-dealer-gift-text:            $gray-text-light;
+$list-dealer-icon-gift:            $orange;
+$list-dealer-mark-text:            $white;
+$list-dealer-mark-supply-base:     #c3c3c3;
+$list-dealer-mark-brandevent-base: #888888;
+$list-dealer-mark-brandsale-base:  $orange;
+$list-dealer-mark-brandgift-base:  $green;
+$list-dealer-mark-cu-text:         $orange;
+$list-dealer-mark-cu-border:       $orange;
+@import "stargrade.scss";
+.list-dealer {
+  .mark-supply,
+  .mark-brandevent,
+  .mark-brandsale,
+  .mark-brandgift {
+    display: inline-block;
+    padding: ptr(1px) ptr(2px);
+    font-size: $fontsize-tiny;
+    color: $list-dealer-mark-text;
+    background-color: $list-dealer-mark-supply-base;
+    border-radius: $radius;
+  }
+  .mark-brandevent { background-color: $list-dealer-mark-brandevent-base;}
+  .mark-brandsale { background-color: $list-dealer-mark-brandsale-base;}
+  .mark-brandgift { background-color: $list-dealer-mark-brandgift-base;}
+  li {
+    position: relative;
+    margin-top: ptr(8px);
+    padding: 0 ptr(8px);
+    line-height: 1;
+    background-color: $list-dealer-base;
+    border: solid $list-dealer-border 1px;
+    border-radius: $radius;
+  }
+  .info {
+    position: relative;
+    display: block;
+    margin-top: ptr(12px);
+    padding-left: ptr(4px);
+    font-size: $fontsize-default;
+    color: $list-dealer-title-text;
+    overflow: hidden;
+    .type {
+      margin-right: ptr(2px);
+      color: $red-light;
+    }
+    .mark-supply {
+      margin: ptr(1px) 0 0 ptr(8px);
+      vertical-align: top;
+    }
+    small {
+      display: block;
+      margin: ptr(5px) 0 ptr(-3px);
+      font-size: $fontsize-tiny;
+      color: $list-dealer-brand-text;
+      line-height: 1.5;
+    }
+    .icon-arrow-right {
+      display: inline-block;
+      margin: ptr(2px) 0 0 ptr(5px);
+      font-size: $fontsize-tiny;
+      color: #666;
+      vertical-align: top;
+    }
+    .supply {
+      position: absolute;
+      top: ptr(2px);
+      right: 0;
+      font-size: $fontsize-tiny;
+      color: $list-dealer-supply-text;
+    }
+    .price {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $list-dealer-price-text;
+      dfn {
+        font-size: $fontsize-small;
+        margin-right: ptr(6px);
+      }
+      em { font-size: $fontsize-tiny;}
+    }
+    p.price {
+      position: static;
+      margin-top: ptr(12px);
+      .low {
+        margin-left: ptr(12px);
+        font-size: $fontsize-tiny;
+        color: #c3c3c3;
+      }
+    }
+    p.price + .detail {
+      margin: ptr(8px) ptr(-4px) 0;
+      padding: ptr(5px) ptr(4px);
+      font-size: $fontsize-tiny;
+      color: $gray-text-light;
+      @extend %ellipsis-basic;
+      background-color: $gray-base-light;
+      border-radius: $radius;
+      em { color: $green;}
+    }
+    .guide {
+      position: relative;
+      min-height: ptr(12px);
+      margin-top: ptr(12px);
+      overflow: hidden;
+      .stargrade {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .price {
+        position: static;
+        float: right;
+      }
+      .brand {
+        float: right;
+        font-size: $fontsize-tiny;
+        color: #444;
+      }
+    }
+    &.withlow + .area { margin-top: ptr(-46px);}
+  }
+  .site {
+    position: relative;
+    display: block;
+    margin-top: ptr(12px);
+    padding: 0 ptr(4px);
+    font-size: $fontsize-small;
+    color: $list-dealer-site-text;
+    @extend %ellipsis-basic;
+    .icon-anchor{
+      margin-right: ptr(6px);
+      color: $list-dealer-icon-anchor;
+    }
+    &.withdist {
+      position: relative;
+      padding-right: ptr(79px);
+      .dist {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: ptr(70px);
+        padding: ptr(1px) 0 ptr(1px) ptr(8px);
+        border-left: solid $list-dealer-dist-border 1px;
+      }
+    }
+  }
+  .area {
+    position: absolute;
+    right: ptr(8px);
+    z-index: 10;
+    margin-top: ptr(-16px);
+    padding: ptr(1px) 0;
+    font-size: $fontsize-small;
+    color: $list-dealer-area-text;
+    .dist {
+      display: inline-block;
+      margin-left: ptr(8px);
+      padding-left: ptr(8px);
+      border-left: solid $list-dealer-dist-border 1px;
+    }
+  }
+  .handle {
+    margin: ptr(12px) 0;
+    overflow: hidden;
+    .telphone,.primary {
+      float: left;
+      width: 148px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+    .primary {
+      float: right;
+      width: 88px;
+    }
+  }
+  .sale {
+    display: block;
+    padding: ptr(8px) ptr(4px);
+    font-size: $fontsize-small;
+    color: $list-dealer-sale-text;
+    @extend %ellipsis-basic;
+    border-top: solid $list-dealer-sale-border 1px;
+    .mark-cu {
+      display: inline-block;
+      width: ptr(16px);
+      margin-right: ptr(8px);
+      padding: ptr(2px) 0;
+      font-size: ptr(12px);
+      color: $list-dealer-mark-cu-text;
+      line-height: 1;
+      text-align: center;
+      border: solid $list-dealer-mark-cu-border 1px;
+      border-radius: $radius;
+    }
+  }
+  .brandsale {
+    .info {
+      padding: 0;
+      img {
+        float: left;
+        width: ptr(90px);
+        height: ptr(68px);
+        margin-right: ptr(12px);
+        @extend %holdimg;
+      }
+      h4 {
+        margin-top: ptr(2px);
+        @extend %ellipsis-basic;
+      }
+      p.price{
+        position: static;
+        margin-top: ptr(8px);
+      }
+      .mark-brandevent,
+      .mark-brandsale,
+      .mark-brandgift {
+        float: left;
+        margin: ptr(10px) ptr(8px) 0 0;
+        &:last-child { margin-right: 0;}
+      }
+    }
+    .gift {
+      display: block;
+      margin-top: ptr(12px);
+      padding: 0 ptr(4px);
+      font-size: $fontsize-small;
+      color: $list-dealer-gift-text;
+      @extend %ellipsis-basic;
+      .icon-gift{
+        margin-right: ptr(8px);
+        color: $list-dealer-icon-gift;
+        vertical-align: ptr(1px);
+      }
+    }
+  }
+}

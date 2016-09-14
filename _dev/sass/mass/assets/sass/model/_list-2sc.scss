@@ -1,0 +1,74 @@
+@charset "UTF-8";
+//二手车列表控件
+$list-2sc-text:         $gray-text;
+$list-2sc-base:         $gray-base-light;
+$list-2sc-mileage-text: $gray-text-light;
+$list-2sc-price-text:   $orange;
+.list-2sc {
+  margin-left: 8px;
+  margin-right: 8px;
+  line-height: 1;
+  overflow: hidden;
+  li { 
+    float: left;
+    @extend %box-sizing-border;
+    width: 50%;
+    padding: ptr(12px) 4px 0;
+  }
+  a { 
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    background-color: $list-2sc-base;
+    overflow: hidden;
+  }
+  img {
+    width: 140px;
+    height: 105px;
+    @extend %holdimg;
+  }
+  h4 {
+    position: relative; 
+    display: block;
+    height: ptr(48px);
+    padding: ptr(4px) ptr(6px) 0;
+    font-size: $fontsize-default;
+    color: $list-2sc-text;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+  .mileage {
+    float: left;
+    margin: ptr(8px) 0 ptr(8px) ptr(6px);
+    font-size: $fontsize-tiny;
+    color: $list-2sc-mileage-text;
+  }
+  .price {
+    float: right;
+    margin: ptr(4px) ptr(6px) ptr(8px) 0;
+    font-size: $fontsize-default;
+    color: $list-2sc-price-text;
+    em { font-size: $fontsize-tiny;}
+  }
+  @include min-screen(360px) {
+    a { width: 160px;}
+    img {
+      width: 160px;
+      height: 120px;
+    }
+  }
+  @include min-screen(375px) {
+    a { width: 167px;}
+    img {
+      width: 167px;
+      height: 125px;
+    }
+  }
+  @include min-screen(414px) {
+    a { width: 187px;}
+    img {
+      width: 187px;
+      height: 140px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+//车型车列表控件
+$list-cartype-text:                $gray-text-light;
+$list-cartype-base:                $white;
+$list-cartype-border:              $gray-border-light;
+$list-cartype-title-text:          $blue-light;
+$list-cartype-price-text:          $orange;
+$list-cartype-sale-text-highlight: $red-light;
+$list-cartype-add-text:            $blue-light;
+$list-cartype-add-text-done:       $gray-text-light;
+$list-cartype-add-text-disabled:   $gray-text-lighter;
+$list-cartype-add-base:            $white;
+$list-cartype-add-base-done:       $gray-base-light;
+$list-cartype-add-border:          $gray-border-light;
+.list-cartype {
+  li {
+    position: relative;
+    margin-top: ptr(8px);
+    padding: 0 ptr(8px) ptr(6px) ptr(12px);
+    color: $list-cartype-text;
+    line-height: 1;
+    background-color: $list-cartype-base;
+    border: solid $list-cartype-border 1px;
+    border-radius: $radius;
+  }
+  .caption {
+    display: block;
+    margin: ptr(8px) ptr(76px) 0 0;
+    font-size: $fontsize-large;
+    color: $list-cartype-title-text;
+    line-height: 1.5;
+  }
+  .price {
+    position: relative;
+    margin-top: ptr(2px);
+    font-size: $fontsize-small;
+    line-height: ptr(26px);
+    overflow: hidden;
+    strong {
+      font-size: $fontsize-default;
+      color: $list-cartype-price-text;
+    }
+    s { text-decoration: line-through;}
+    em { font-size: $fontsize-tiny;}
+    .primary {
+      position: absolute;
+      right: 0;
+      bottom: ptr(6px);
+      width: ptr(72px);
+      text-align: center;
+    }
+  }
+  .sale {
+    position: relative;
+    margin: ptr(6px) 0;
+    padding: ptr(8px) 0;
+    font-size: $fontsize-tiny;
+    strong {
+      margin-right: ptr(8px);
+      color: $list-cartype-price-text;
+    }
+    .highlight {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: ptr(72px);
+      text-align: center;
+    }
+  }
+  .add {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: ptr(64px);
+    padding: ptr(14px) 0;
+    font-size: $fontsize-small;
+    color: $list-cartype-add-text;
+    text-align: center;
+    background-color: $list-cartype-add-base;
+    border: solid $list-cartype-add-border 1px;
+    border-radius: $radius;
+    &.done {
+      color: $list-cartype-add-text-done;
+      background-color: $list-cartype-add-base-done;
+    }
+    &.disabled {
+      color: $list-cartype-add-text-disabled;
+    }
+  }
+  li.null {
+    .caption {
+      min-height: ptr(54px);
+    }
+    .price {
+      margin-bottom: ptr(6px);
+      line-height: ptr(28px);
+      .primary {
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

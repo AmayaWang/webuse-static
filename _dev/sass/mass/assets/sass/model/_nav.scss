@@ -1,0 +1,19 @@
+@charset "UTF-8";
+//主导航控件
+$nav-text: $white;
+$nav-base: $blue;
+.nav {
+  padding: ptr(5px) 0;
+  background-color: $nav-base;
+  line-height: 1;
+  overflow: hidden;
+  a {
+    float: left; 
+    width: 20%;
+    padding: ptr(6px) 0;
+    font-size: $fontsize-large;
+    color: $nav-text;
+    text-align: center;
+    &:visited { color: $nav-text - #000001;}
+  }
+}

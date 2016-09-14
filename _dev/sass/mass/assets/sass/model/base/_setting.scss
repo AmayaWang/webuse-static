@@ -1,0 +1,73 @@
+@charset "UTF-8";
+//px转换rem
+@function ptr($px){
+  $browser-default-font-size: 16px!default;
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+
+//字号
+$fontsize-tiny:          ptr(12px)!default;
+$fontsize-small:         ptr(14px)!default;
+$fontsize-default:       ptr(16px)!default;
+$fontsize-large:         ptr(18px)!default;
+$fontsize-big:           ptr(20px)!default;
+//圆角
+$radius:                 ptr(2px);
+//颜色
+$gray-text:              #444444;
+$gray-text-light:        #888888;
+$gray-text-lighter:      #c3c3c3;
+$gray-base:              #ededed;
+$gray-base-light:        #f5f5f5;
+$gray-border:            #acacac;
+$gray-border-light:      #d7d7d7;
+$gray-border-lighter:    #e9e9e9;
+$blue:                   #3b5998;
+$blue-light:             #2f75bb;
+$red:                    #d60000;
+$red-light:              #f43531;
+$orange:                 #ff6600;
+$green:                  #4fb947;
+$white:                  #ffffff;
+//全局设定
+html{ background-color:$gray-base; font:16px/1 "PingFang SC",Helvetica,Arial,"Hiragino Sans GB","Microsoft Yahei",STHeiTi,sans-serif; color: $gray-text;}
+//字体图标
+@import "../font/iconfont.scss";
+//字体图标-认证v
+.icon-v {
+  display: inline-block; padding: ptr(1px); font-size: ptr(12px); color: $white; line-height: 1; text-align: center; background-color: $orange; border-radius: 50%;
+  &::before { display: inline-block; vertical-align: top; -webkit-transform:scale(0.75); transform:scale(0.75);}
+  &.biz { background-color: $blue;}
+}
+//字体图标-视频播放
+.icon-play-trigger { display: inline-block; padding: ptr(6px) ptr(5px) ptr(6px) ptr(7px); color: $white; line-height: 1; background-color: rgba(0,0,0,0.5); border: solid $white 1px; border-radius: 50%;}
+//图片图标
+.icon::before      { content: ""; display: inline-block; background: url(http://s.autoimg.cn/mass/v2/img/icon-v20150629.png) no-repeat; background-size: ptr(30px) auto;}
+.icon-home::before { width: ptr(19px); height: ptr(17px); background-position: 0 0;}
+.icon-user::before { width: ptr(22px); height: ptr(22px); background-position: 0 ptr(-30px);}
+.icon-menu::before { width: ptr(17px); height: ptr(15px); background-position: 0 ptr(-60px);}
+//汽车之家logo图标
+.athm              { display: inline-block; background: url(http://s.autoimg.cn/mass/v2/img/logo.png) no-repeat; background-size: ptr(100px) auto;}
+//加载图标
+.load              { display: inline-block; width: ptr(12px); height: ptr(12px); background: url(http://s.autoimg.cn/mass/v2/img/loading.gif) no-repeat; background-size: 100% 100%; opacity: 0.8;}
+//常用样式
+.fn-mt             { margin-top: ptr(8px);}
+.fn-mb             { margin-bottom: ptr(8px);}
+.fn-mt-large       { margin-top: ptr(12px);}
+.fn-mb-large       { margin-bottom: ptr(12px);}
+.fn-mlr            { margin-left: ptr(8px); margin-right: ptr(8px);}
+.fn-mlr-large      { margin-left: ptr(12px); margin-right: ptr(12px);}
+.fn-halfword       { margin-right: 0.5em;}
+.fn-oneword        { margin-right: 1em;}
+.fn-hide           { display: none!important;}
+//iso下tab事件兼容
+[data-role="tab"] .item { cursor: pointer;}
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+//提示控件
+$tips-text:       $gray-text;
+$tips-warn-text:  $orange;
+$tips-error-text: $red-light;
+.tips {
+  position: relative;
+  padding-left: ptr(22px);
+  font-size: $fontsize-tiny;
+  color: $tips-text;
+  line-height: 1.5;
+  .icon-info,
+  .icon-exclamation,
+  .icon-query,
+  .icon-cross,
+  .icon-ok {
+    position: absolute;
+    top: ptr(2px);
+    left: 0;
+    width: ptr(14px);
+    height: ptr(14px);
+    font-size: ptr(20px);
+    color: $white;
+    border-radius: 50%;
+    &::before {
+      position: absolute;
+      top: ptr(-8px);
+      left: ptr(-3px);
+      @include scale(0.5);
+    }
+  }
+  .icon-info { background-color: $blue-light;}
+  .icon-exclamation { background-color: $orange;}
+  .icon-query { background-color: $orange;}
+  .icon-cross {
+    background-color: $red-light;
+    &::before {
+      top: ptr(-7px);
+      @include scale(0.4);
+    }
+  }
+  .icon-ok { background-color: $green;}
+  &.warn { color: $tips-warn-text;}
+  &.error { color: $tips-error-text;}
+}

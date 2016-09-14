@@ -1,0 +1,111 @@
+@charset "UTF-8";
+//广告控件
+%mark-promotion {
+  display: inline-block;
+  padding: ptr(1px) ptr(2px);
+  font-size: $fontsize-tiny;
+  color: $white;
+  line-height: 1;
+  background-color: $red;
+  border-radius: $radius;
+}
+.adv01,
+.jmp01,
+.adv02,
+.jmp02 {
+  position: relative;
+  background-color: $white;
+  border-radius: $radius;
+  line-height: 1;
+  a { 
+    display: block; 
+    padding: ptr(12px) ptr(4px); 
+    font-size: $fontsize-default;
+    color: $gray-text;
+    @extend %ellipsis-basic;
+  }
+  em {
+    position: absolute;
+    top: ptr(13px);
+    right: ptr(4px);
+    @extend %mark-promotion;
+  }
+}
+.adv03,
+.jmp03 {
+  position:relative;
+  background-color: $white;
+  border-radius: $radius;
+  line-height: 1;
+  a {
+    display: block;
+    padding: ptr(4px);
+    color: $gray-text;
+    overflow: hidden;
+    img {
+      float: left;
+      width: ptr(120px);
+      height: ptr(60px);
+      margin-right: ptr(8px);
+    }
+    .noa {
+      display: block;
+      height: ptr(40px);
+      font-size: $fontsize-default;
+      line-height: ptr(20px);
+    }
+    .nob {
+      display: block;
+      margin-top: ptr(4px);
+      font-size: $fontsize-tiny;
+      color: $gray-text-light;
+    }
+    em {
+      position:absolute;
+      right: ptr(4px);
+      bottom: ptr(7px);
+      @extend %mark-promotion;
+    }
+  }  
+}
+.adv03-1,
+.jmp03-1 {
+  position:relative;
+  background-color: $white;
+  border-radius: $radius;
+  line-height: 1;
+  a { 
+    display: block;
+    padding: ptr(4px);
+    color: $gray-text;
+    overflow:hidden; 
+    img {
+      float: left;
+      width: ptr(60px);
+      height: ptr(60px);
+      margin-right: ptr(8px);
+    }
+    .noa {
+      display: block;
+      font-size: $fontsize-default;
+      line-height: ptr(20px);
+    }
+    .nob {
+      display: block;
+      margin-top: ptr(3px);
+      font-size: $fontsize-tiny;
+      color: $gray-text-light;
+      line-height: ptr(18px);
+    }
+    em {
+      position:absolute;
+      right: ptr(4px);
+      bottom: ptr(7px);
+      @extend %mark-promotion;
+    }
+  }  
+}
+.adv05,
+.jmp05 {
+  img{ width: 100%; height: auto;}
+}

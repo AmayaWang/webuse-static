@@ -1,0 +1,18 @@
+@charset "UTF-8";
+$backtop-base: rgba(0,0,0,0.8);
+$backtop-icon: $white;
+//返顶控件
+.icon-backtop {
+  position: fixed;
+  right: ptr(8px);
+  bottom: ptr(60px);
+  z-index: 1001;
+  width: ptr(44px);
+  padding: ptr(10px) 0;
+  font-size: ptr(24px);
+  color: $backtop-icon;
+  line-height: 1;
+  text-align: center;
+  background-color: $backtop-base;
+  border-radius: $radius;
+}

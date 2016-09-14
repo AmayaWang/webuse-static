@@ -1,0 +1,144 @@
+@charset "UTF-8";
+//发评论控件
+$input-comment-text:                   $gray-text;
+$input-comment-base:                   $white;
+$input-comment-border:                 $gray-border;
+$input-comment-border-focus:           $blue-light;
+$input-comment-text-disabled:          $gray-text-light;
+$input-comment-submit-text:            $white;
+$input-comment-submit-base:            $blue-light;
+$input-comment-submit-text-disabled:   $gray-text-lighter;
+$input-comment-submit-base-disabled:   $gray-base-light;
+$input-comment-submit-border-disabled: $gray-border;
+.input-comment {
+  position: relative;
+  padding-right: ptr(88px);
+  .load { display: none;}
+  textarea,
+  input[type="text"] {
+    @extend %appearance;
+    @extend %box-sizing-border;
+    display: block;
+    width: 100%;
+    height: ptr(64px);
+    padding: ptr(4px) ptr(8px);
+    font-size: $fontsize-default;
+    color: $input-comment-text;
+    line-height: 1.5;
+    background-color: $input-comment-base;
+    border: solid $input-comment-border 1px;
+    border-radius: $radius;
+    resize: none;
+    @include box-shadow(1px 1px 2px #d6d6d6 inset); 
+    &:focus { border-color: $input-comment-border-focus;}
+  }
+  input[type="text"] {
+    height: ptr(44px);
+    padding: ptr(9px) ptr(8px);
+  }
+  input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @extend %appearance;
+    @extend %box-sizing-border;
+    width: ptr(90px);
+    height: ptr(64px);
+    font-size: $fontsize-default;
+    color: $input-comment-submit-text;
+    text-align: center;
+    background-color: $input-comment-submit-base;
+    border-radius: $radius;
+  }
+  &.small {
+    input[type="submit"] {
+      top: 0;
+      right: 0;
+      height: ptr(44px);
+    }
+  }
+  &.loading {
+    textarea,
+    input[type="text"] { color: $input-comment-text-disabled;}
+    .load {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      display: block;
+      margin: ptr(-6px) 0 0 ptr(-51px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+$comment-publish-user-text:            $gray-text;
+$comment-publish-user-text-highlight:  $blue-light;
+$comment-publish-user-split-border:    $gray-border-lighter;
+$comment-publish-login-text:           $gray-text-light;
+$comment-publish-login-text-highlight: $blue-light;
+$comment-publish-small-base:           $gray-base-light;
+.comment-publish {
+  position: relative;
+  line-height: 1;
+  .user {
+    margin-bottom: ptr(12px);
+    font-size: $fontsize-default;
+    color: $comment-publish-user-text;
+    a { color: $comment-publish-user-text-highlight;}
+    .split {
+      display: inline-block;
+      height: ptr(16px);
+      margin-right: ptr(8px);
+      border-right: solid $comment-publish-user-split-border 1px;
+      vertical-align: top;
+    }
+  }
+  .login { display: none;}
+  &.disabled {
+    .user { display: none;}
+    .login {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      @extend %box-sizing-border;
+      display: block;
+      width: 100%;
+      padding: ptr(24px) ptr(88px) ptr(24px) 0;
+      font-size: $fontsize-default;
+      color: $comment-publish-login-text;
+      text-align: center;
+      a {
+        color: $comment-publish-login-text-highlight;
+        margin-left: ptr(4px);
+      }
+    }
+    textarea,
+    input[type="text"] {
+      &::-webkit-input-placeholder { opacity: 0;}
+      &::-moz-placeholder { opacity: 0;}
+      &:-ms-input-placeholder { opacity: 0;}
+    }
+    input[type="submit"] {
+      color: $input-comment-submit-text-disabled;
+      background-color: $input-comment-submit-base-disabled;
+      border: solid $input-comment-submit-border-disabled 1px;
+    }
+    &.small {
+      .login {
+        padding-top: ptr(14px);
+        padding-bottom: ptr(14px);
+        &::before { top: ptr(10px);}
+      }
+    }
+  }
+}
